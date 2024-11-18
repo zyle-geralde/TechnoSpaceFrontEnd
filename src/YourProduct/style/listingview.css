@@ -1,0 +1,134 @@
+.Productslink,.YourProductslink,.Purchaselink{
+    text-decoration: none;
+    color: black;
+    margin-right: 10px;
+}
+.headerBar{
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 15px;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    box-shadow: 0px 0px 10px rgb(165, 165, 165);
+}
+.ProductPurchaseIcon{
+    width: 20px;
+    height: 13px;
+    margin-right: 10px;
+}
+.UserIcon{
+    width: 25px;
+    height: 25px;
+}
+.navImageList{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.ListingTitle{
+    background-color: #800000;
+    color: white;
+    font-size: 25px;
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    border-radius: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.listingsContainer{
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 60px;
+}
+.firstlayer{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    column-gap: 30px;
+    row-gap: 30px;
+    min-width: 50%;
+    margin-top: 30px;
+}
+.categoryContainer:nth-child(n+1) {
+    grid-column: span 2; 
+}
+.categoryContainer:nth-child(n+4) {
+    grid-column: span 3; 
+}
+
+.categoryContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 10px rgb(174, 174, 174);
+    justify-self: center;
+    min-width: 200px;
+    min-height: 200px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.categoryImage{
+    height: 100px;
+    width: auto;
+}
+.layerCont{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 60px;
+}
+.categoryLabel{
+    font-weight: bold;
+    color: #A80101;
+    margin-top: 10px;
+}
+
+@media (min-width:501px) and (max-width:800px){
+    .firstlayer{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 30px;
+        row-gap: 30px;
+        min-width: 50%;
+        margin-top: 30px;
+    }
+    .categoryContainer:nth-child(n+1) {
+        grid-column: span 1; 
+    }
+    .categoryContainer:nth-child(n+4) {
+        grid-column: span 1; 
+    }
+}
+
+@media (max-width:500px){
+    .firstlayer{
+        display: grid;
+        grid-template-columns: 1fr;
+        column-gap: 30px;
+        row-gap: 30px;
+        min-width: 50%;
+        margin-top: 30px;
+    }
+    .categoryContainer:nth-child(n+1) {
+        grid-column: span 1; 
+    }
+    .categoryContainer:nth-child(n+4) {
+        grid-column: span 1; 
+    }
+}

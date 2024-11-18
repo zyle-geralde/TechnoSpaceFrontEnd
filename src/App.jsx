@@ -17,7 +17,6 @@ function App() {
             <Route path="/Gadgetsview" element={<GadgetsPage />} />
             <Route path="/Othersview" element={<OthersPage />} />
             <Route path="*" element={<NotfundFunc />} />
-
         </Routes>
     );
 

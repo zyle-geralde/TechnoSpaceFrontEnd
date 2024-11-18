@@ -8,7 +8,7 @@ import { useNavigate } from "react-router-dom";
 function ListingView() {
     var firstlayer = ['003-stationery 1.png', '002-graduation 1.png', '001-gadget 1.png','004-application 1.png','hand.png']
     var firstlayername = ['School Supplies', 'Learning Resources', 'Gadgets', 'Others', 'Sell Items']
-    var funcList = [navigateToSchoolSupplies,navigateToLearningResources,navigateToGadgets,navigateToOthers,navigateToSchoolSupplies]
+    var funcList = [navigateToSchoolSupplies,navigateToLearningResources,navigateToGadgets,navigateToOthers,navigateToSellItems]
     
 
     const navigate = useNavigate()
@@ -17,16 +17,16 @@ function ListingView() {
         navigate("/Learningresourcesview")
     }
     function navigateToSchoolSupplies() {
-        navigate("/Schoolsupplies")
+        navigate("/Schoolsuppliesview")
     }
     function navigateToGadgets() {
-        navigate("/Gadgets")
+        navigate("/Gadgetsview")
     }
     function navigateToOthers() {
-        navigate("/Others")
+        navigate("/Othersview")
     }
     function navigateToSellItems() {
-        navigate("/SellItems")
+        navigate("/SellItemsview")
     }
     return (
         <>

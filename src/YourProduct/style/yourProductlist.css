@@ -23,3 +23,67 @@
     width: 600px;
     margin-right: 10px;
 }
+
+.productGrid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    column-gap: 15px;
+    row-gap: 15px;
+    overflow-y: auto;
+}
+.titleTextstyle{
+    font-size: 35px;
+    font-weight: bold;
+    color: #800000;
+    margin-left: 5%;
+    margin-bottom: 30px;
+    margin-top: 10px;
+}
+.pGridView{
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+
+}
+.cardProd{
+    min-height: 300px;
+    min-width: 250px;
+    cursor: pointer;
+    background-color: #F3F3F3;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(107, 107, 107, 0.3);
+}
+
+
+
+/* For ScrollBar*/
+.scrollable-container {
+    flex: 1;
+    overflow-y: auto; 
+  }
+  
+
+  .scrollable-container::-webkit-scrollbar {
+    width: 8px; 
+  }
+  
+  .scrollable-container::-webkit-scrollbar-thumb {
+    background: #bbb; 
+    border-radius: 10px; 
+  }
+  
+  .scrollable-container::-webkit-scrollbar-thumb:hover {
+    background: #888; 
+  }
+  
+  .scrollable-container::-webkit-scrollbar-track {
+    background: #f4f4f4; 
+    border-radius: 10px;
+  }
+  
+
+  .scrollable-container {
+    scrollbar-width: thin; 
+    scrollbar-color: #bbb #f4f4f4; 
+  }
+

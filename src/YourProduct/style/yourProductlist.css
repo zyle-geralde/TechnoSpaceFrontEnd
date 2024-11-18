@@ -46,12 +46,16 @@
 
 }
 .cardProd{
-    min-height: 300px;
-    min-width: 250px;
+    height: 300px;
+    width: 250px;
     cursor: pointer;
     background-color: #F3F3F3;
     border-radius: 10px;
     box-shadow: 0 0 5px rgba(107, 107, 107, 0.3);
+}
+.prodCardImage{
+    object-fit: contain;
+    object-position:center;
 }
 
 

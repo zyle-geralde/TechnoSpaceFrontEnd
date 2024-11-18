@@ -6,6 +6,7 @@ import LearningResourcesPage from './YourProduct/pages/LearningResourcesPage';
 import NotfundFunc from './NotFound/notfound';
 import SchoolSupplyPage from './YourProduct/pages/SchoolSuppliespage';
 import GadgetsPage from './YourProduct/pages/GadgetView';
+import OthersPage from './YourProduct/pages/OthersViewPage';
 
 function App() {
     return (
@@ -14,6 +15,7 @@ function App() {
             <Route path="/Learningresourcesview" element={<LearningResourcesPage />} />
             <Route path="/Schoolsuppliesview" element={<SchoolSupplyPage />} />
             <Route path="/Gadgetsview" element={<GadgetsPage />} />
+            <Route path="/Othersview" element={<OthersPage />} />
             <Route path="*" element={<NotfundFunc />} />
 
         </Routes>

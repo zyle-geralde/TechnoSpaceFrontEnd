@@ -11,7 +11,7 @@ function SearchSection() {
     return (
         <>
             <div className="searchsecCont">
-                <img src="./images/back.png" className='backButton' onClick={backtoListing()}></img>
+                <img src="./images/back.png" className='backButton' onClick={backtoListing}></img>
                 <div style={{ "display": "flex", "flexDirection": "row", "alignItems": "center" }}>
                     <div style={{ "display": "flex", "flexDirection": "row", marginRight: "20px", "alignItems": "center" }}>
                         <input type='text' className='searchInput'></input>

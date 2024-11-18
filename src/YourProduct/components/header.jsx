@@ -1,3 +1,4 @@
+import "../style/listingview.css"
 function HeaderComp() {
     return (
         <>

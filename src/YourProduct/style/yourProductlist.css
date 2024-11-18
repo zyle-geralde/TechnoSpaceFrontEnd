@@ -1,0 +1,25 @@
+.searchsecCont{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+    margin-left: 30px;
+}
+.backButton{
+    width: 25px;
+    height: 20px;
+    cursor: pointer;
+}
+.filterButton{
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+.searchInput{
+    padding: 10px 10px;
+    padding-right: 40px;
+    font-size: 15px;
+    width: 600px;
+    margin-right: 10px;
+}

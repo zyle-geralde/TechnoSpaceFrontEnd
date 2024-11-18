@@ -10,6 +10,7 @@
     width: 25px;
     height: 20px;
     cursor: pointer;
+    margin-right: 30px;
 }
 .filterButton{
     width: 25px;
@@ -30,6 +31,7 @@
     column-gap: 15px;
     row-gap: 15px;
     overflow-y: auto;
+    padding-bottom: 20px;
 }
 .titleTextstyle{
     font-size: 35px;
@@ -52,10 +54,19 @@
     background-color: #F3F3F3;
     border-radius: 10px;
     box-shadow: 0 0 5px rgba(107, 107, 107, 0.3);
+    padding: 7px;
 }
 .prodCardImage{
-    object-fit: contain;
-    object-position:center;
+    object-fit: cover;
+    object-position:right;
+    height: 100%;
+    width: 100%;
+}
+.prodCardName{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-weight: bold;
+    font-size: 20px;
 }
 
 
@@ -91,3 +102,36 @@
     scrollbar-color: #bbb #f4f4f4; 
   }
 
+
+@media(max-width:800px) and (min-width:560px){
+    .searchInput{
+        width: 400px;
+    }
+}
+
+@media(max-width:560px){
+    .searchInput{
+        width: 100%;
+    }
+}
+@media (max-width:1450px) and (min-width:1160px){
+    .productGrid{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+@media (min-width:860px) and (max-width:1160px){
+    .productGrid{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media (max-width:860px) and (min-width:575px){
+    .productGrid{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media (max-width:575px){
+    .productGrid{
+        grid-template-columns: 1fr;
+    }
+}

@@ -6,8 +6,8 @@
 
 }
 .MainimageFit{
-    height: 450px;
-    width: 550px;
+    height: 500px;
+    width: 600px;
 }
 .mainImage{
     object-fit: cover;
@@ -58,5 +58,16 @@
     padding: 5px;
 }
 .formNamestyle{
-    
+    font-weight: bold;
+    color: #800000c4;
+    font-size: 18px;
+}
+.formTextAreastyle{
+    width: 400px;
+    font-size: 15px;
+    padding: 5px;
+    height: 100px;
+}
+.formContMarg{
+    margin-bottom: 5px;
 }

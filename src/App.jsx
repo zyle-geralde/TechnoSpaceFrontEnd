@@ -10,7 +10,7 @@ import OthersPage from './YourProduct/pages/OthersViewPage';
 import EditLearningResourcesPage from './EditYourProducts/pages/EditLearningResourcesPage';
 import EditSchoolSuplliesPage from './EditYourProducts/pages/EditSchoolSupplies';
 import EditGadgets from './EditYourProducts/pages/EditGadgets';
-
+import EditOthers from './EditYourProducts/pages/EditOthers';
 function App() {
     return (
         <Routes>
@@ -22,6 +22,7 @@ function App() {
             <Route path="/EditLearningResources" element={<EditLearningResourcesPage />} /> 
             <Route path="/EditSchoolSupplies" element={<EditSchoolSuplliesPage />} /> 
             <Route path="/EditGadgets" element={<EditGadgets />} /> 
+            <Route path="/EditOthers" element={<EditOthers />} /> 
             <Route path="*" element={<NotfundFunc />} />
         </Routes>
     );

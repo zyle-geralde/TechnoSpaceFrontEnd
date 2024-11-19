@@ -3,7 +3,13 @@ import HeaderComp from "../components/header";
 import SearchSection from "../components/searchsection";
 import ListProducts from "../components/listproducts";
 import ProductTitle from "../components/productTitle";
+import { useNavigate } from "react-router-dom";
 function OthersPage() {
+    const navigate = useNavigate();
+
+    function gotoEditLR() {
+        navigate("/EditOthers")
+    }
     return (
         <div style={{
             "maxHeight": "100vh", "minHeight": "100vh", "height": "100vh", "display": "flex", "flexDirection": "column",
@@ -19,7 +25,7 @@ function OthersPage() {
                 <ProductTitle titleText={"Others"} />
             </div>
             <div className="scrollable-container">
-                <ListProducts />
+                <ListProducts onFuncme={gotoEditLR}/>
             </div>
         </div>
     )

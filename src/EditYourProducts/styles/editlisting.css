@@ -153,12 +153,91 @@
         width: 500px;
     }
 }
-@media (max-width:945px){
+@media (max-width:945px) and (min-width:690px){
     .EditLrContainer{
         flex-direction: column;
         align-items: center;
     }
     .contMainSub{
         margin-bottom: 100px;
+    }
+}
+@media (max-width:690px) and (min-width:560px){
+    .EditLrContainer{
+        flex-direction: column;
+        align-items: center;
+    }
+    .contMainSub{
+        margin-bottom: 100px;
+    }
+    .MainimageFit{
+        height: 400px;
+        width: 500px;
+    }
+}
+@media(max-width:560px) and (min-width:420px){
+    .MainimageFit{
+        height: 250px;
+        width: 350px;
+    }
+    .EditLrContainer{
+        flex-direction: column;
+        align-items: center;
+    }
+    .contMainSub{
+        margin-bottom: 100px;
+    }
+    .formInputStyle{
+        width: 300px
+    }
+    .formTextAreastyle{
+        width: 300px;
+    }
+    .cancelBut{
+        width: 145px;
+    }
+    .doneBut{
+        width: 145px;
+    }
+    .subImageFit{
+        height: 70px;
+        width: 80px;
+        margin-right: 10px;
+    }
+    .addsubImage{
+        margin-top: -45px;
+    }
+}
+@media(max-width:420px){
+    .MainimageFit{
+        height: 180px;
+        width: 280px;
+    }
+    .EditLrContainer{
+        flex-direction: column;
+        align-items: center;
+    }
+    .contMainSub{
+        margin-bottom: 100px;
+    }
+    .formInputStyle{
+        width: 180px
+    }
+    .formTextAreastyle{
+        width: 180px;
+    }
+    .cancelBut{
+        width: 90px;
+    }
+    .doneBut{
+        width: 90px;
+    }
+    .subImageFit{
+        height: 55px;
+        width: 65px;
+        margin-right: 5px;
+    }
+    .addsubImage{
+        margin-top: -35px;
     }
 }

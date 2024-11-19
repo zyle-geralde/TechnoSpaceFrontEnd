@@ -7,8 +7,8 @@ function EditLearningResourcesPage() {
             <div style={{ "height": "100vh", "overflowY":"hidden"}}>
                 <HeaderComp />
 
-                <div className = "EditLrContainer">
-
+                <div className="EditLrContainer">
+                    
                 </div>
             </div>
         </>

@@ -3,7 +3,8 @@
     flex-direction: row;
     justify-content: center;
     overflow-y: auto;
-    min-height: 100%;
+    margin-top: 60px;
+
 }
 .MainimageFit{
     height: 500px;
@@ -22,6 +23,8 @@
     padding: 20px 40px;
     border-radius: 5px;
     cursor: pointer;
+    margin-top: -100px;
+    margin-bottom: 50px;
 }
 .subImageCont{
     display: flex;
@@ -50,6 +53,7 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    margin-top: -60px;
 }
 .formInputStyle{
     width: 400px;
@@ -101,3 +105,31 @@
     background-color: black;
     overflow-y: auto;
 }
+.scrollDiv{
+    height: 100vh;
+    overflow-y: auto;
+}
+
+.scrollDiv::-webkit-scrollbar {
+    width: 8px; 
+  }
+  
+  .scrollDiv::-webkit-scrollbar-thumb {
+    background: #bbb; 
+    border-radius: 10px; 
+  }
+  
+  .scrollDiv::-webkit-scrollbar-thumb:hover {
+    background: #888; 
+  }
+  
+  .scrollDiv::-webkit-scrollbar-track {
+    background: #f4f4f4; 
+    border-radius: 10px;
+  }
+  
+
+  .scrollDiv {
+    scrollbar-width: thin; 
+    scrollbar-color: #bbb #f4f4f4; 
+  }

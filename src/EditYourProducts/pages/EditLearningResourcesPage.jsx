@@ -7,7 +7,7 @@ import BackComp from "../components/backcomp";
 function EditLearningResourcesPage() {
     return (
         <>
-            <div style={{ "height": "100vh", "overflowY":"auto"}}>
+            <div className = "scrollDiv"style={{ "height": "100vh", "overflowY":"auto"}}>
                 <HeaderComp />
                 <BackComp />
                 <div className="EditLrContainer">

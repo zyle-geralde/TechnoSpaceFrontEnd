@@ -8,7 +8,7 @@ function FormFillComp() {
             <FormLabelComp formName="Project Specification" typeform="textT" />
             <FormLabelComp formName="Available Schedule" typeform="textT" />
             <FormLabelComp formName="Location" typeform="formT" />
-            <FormLabelComp formName="Price" typeform = "formnumT"/>
+            <FormLabelComp formName="Price" typeform="formnumT" />
         </div>
     )
 }

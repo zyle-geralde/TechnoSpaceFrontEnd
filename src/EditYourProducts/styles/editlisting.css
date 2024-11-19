@@ -22,7 +22,7 @@
     padding: 20px 40px;
     border-radius: 5px;
     margin-top: -100px;
-
+    cursor: pointer;
 }
 .subImageCont{
     display: flex;
@@ -30,8 +30,8 @@
     margin-left: 10px;
 }
 .subImageFit{
-    height: 80px;
-    width: 100px;
+    height: 100px;
+    width: 120px;
     margin-right: 10px;
 }
 .subImage{
@@ -50,7 +50,8 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    margin-top: -50px;
+    margin-top: -60px;
+    cursor: pointer;
 }
 .formInputStyle{
     width: 400px;

@@ -11,7 +11,7 @@ function SubImageComp() {
             <div className='subImageCont'>
                 {
                     showImage.map((item, index) => (
-                        <SubImageFitComp defaultImgProp={item} />
+                        <SubImageFitComp defaultImgProp={item} key={ index} />
                     ))
                 }
             </div>

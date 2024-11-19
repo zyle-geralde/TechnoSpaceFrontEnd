@@ -39,3 +39,14 @@
     object-position: center;
     border-radius: 3px;
 }
+.addsubImage{
+    color: white;
+    background-color: #800000c4;
+    padding: 3px 10px;
+    border-radius: 1000px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: -50px;
+}

@@ -22,3 +22,7 @@
     margin-top: -100px;
 
 }
+.subImageCont{
+    display: flex;
+    flex-direction: row;
+}

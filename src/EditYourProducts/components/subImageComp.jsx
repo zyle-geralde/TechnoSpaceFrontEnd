@@ -4,14 +4,16 @@ import SubImageFitComp from './subimageFitComp';
 
 function SubImageComp() {
     var [defaultImg, setdefaultImg] = useState("./images/defaultImage.png")
+    var [showImage,setshowImage] = useState(["./images/defaultImage.png","./images/defaultImage.png","./images/defaultImage.png","./images/defaultImage.png"])
     
     return (
         <div style={{ "display": "flex", "flexDirection":"column","alignItems":"center"}}>
             <div className='subImageCont'>
-                <SubImageFitComp defaultImgProp={defaultImg} />
-                <SubImageFitComp defaultImgProp={defaultImg}/>
-                <SubImageFitComp defaultImgProp={defaultImg}/>
-                <SubImageFitComp defaultImgProp={defaultImg}/>
+                {
+                    showImage.map((item, index) => (
+                        <SubImageFitComp defaultImgProp={item} />
+                    ))
+                }
             </div>
             <div>
 

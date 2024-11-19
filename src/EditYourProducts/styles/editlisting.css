@@ -25,10 +25,12 @@
 .subImageCont{
     display: flex;
     flex-direction: row;
+    margin-left: 10px;
 }
 .subImageFit{
     height: 80px;
     width: 100px;
+    margin-right: 10px;
 }
 .subImage{
     object-fit: cover;

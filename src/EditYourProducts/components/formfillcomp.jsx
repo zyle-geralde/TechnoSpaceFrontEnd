@@ -11,7 +11,7 @@ function FormFillComp() {
             <FormLabelComp formName="Location" typeform="formT" />
             <FormLabelComp formName="Price" typeform="formnumT" />
             <div style={{ "display": "flex", "flexDirection": "row","marginTop":"20px"}}>
-                <EditFormButton classIndic={"cancelBut"} ButtonName={"Cancel"} />
+                <EditFormButton classIndic={"cancelBut"} ButtonName={"Delete"} />
                 <EditFormButton classIndic={"doneBut"} ButtonName={"Done"}/>
             </div>
         </div>

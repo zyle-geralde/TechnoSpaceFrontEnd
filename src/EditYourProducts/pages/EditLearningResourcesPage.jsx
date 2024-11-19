@@ -1,5 +1,6 @@
 
 import HeaderComp from "../../YourProduct/components/header";
+import ImageHolders from "../components/imageholders";
 import '../styles/editlisting.css'
 function EditLearningResourcesPage() {
     return (
@@ -8,7 +9,7 @@ function EditLearningResourcesPage() {
                 <HeaderComp />
 
                 <div className="EditLrContainer">
-                    
+                    <ImageHolders/>
                 </div>
             </div>
         </>

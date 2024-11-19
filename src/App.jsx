@@ -8,6 +8,8 @@ import SchoolSupplyPage from './YourProduct/pages/SchoolSuppliespage';
 import GadgetsPage from './YourProduct/pages/GadgetView';
 import OthersPage from './YourProduct/pages/OthersViewPage';
 import EditLearningResourcesPage from './EditYourProducts/pages/EditLearningResourcesPage';
+import EditSchoolSuplliesPage from './EditYourProducts/pages/EditSchoolSupplies';
+import EditGadgets from './EditYourProducts/pages/EditGadgets';
 
 function App() {
     return (
@@ -18,6 +20,8 @@ function App() {
             <Route path="/Gadgetsview" element={<GadgetsPage />} />
             <Route path="/Othersview" element={<OthersPage />} />
             <Route path="/EditLearningResources" element={<EditLearningResourcesPage />} /> 
+            <Route path="/EditSchoolSupplies" element={<EditSchoolSuplliesPage />} /> 
+            <Route path="/EditGadgets" element={<EditGadgets />} /> 
             <Route path="*" element={<NotfundFunc />} />
         </Routes>
     );

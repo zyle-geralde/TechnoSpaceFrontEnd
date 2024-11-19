@@ -72,3 +72,26 @@
 .formContMarg{
     margin-bottom: 5px;
 }
+.cancelBut{
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 10px;
+    width: 195px;
+    border-radius: 5px;
+    background-color: #800000c4;
+    margin-right: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+.doneBut{
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 10px;
+    width: 195px;
+    border-radius: 5px;
+    background-color: #027A48;
+    cursor: pointer;
+    text-align: center;
+}

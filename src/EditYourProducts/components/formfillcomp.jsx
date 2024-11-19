@@ -1,5 +1,6 @@
 import '../styles/editlisting.css'
 import FormLabelComp from './formlabelcomp'
+import EditFormButton from './editformButton'
 function FormFillComp() {
     return (
         <div style={{"marginLeft":"50px"}}>
@@ -9,6 +10,10 @@ function FormFillComp() {
             <FormLabelComp formName="Available Schedule" typeform="textT" />
             <FormLabelComp formName="Location" typeform="formT" />
             <FormLabelComp formName="Price" typeform="formnumT" />
+            <div style={{ "display": "flex", "flexDirection": "row","marginTop":"20px"}}>
+                <EditFormButton classIndic={"cancelBut"} ButtonName={"Cancel"} />
+                <EditFormButton classIndic={"doneBut"} ButtonName={"Done"}/>
+            </div>
         </div>
     )
 }

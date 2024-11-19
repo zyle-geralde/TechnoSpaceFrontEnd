@@ -2,9 +2,8 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    overflow-y: auto;
     margin-top: 60px;
-
+    margin-bottom: 30px;
 }
 .MainimageFit{
     height: 500px;
@@ -97,17 +96,18 @@
     cursor: pointer;
     text-align: center;
 }
-.holdDivCont{
+.changeDistance{
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 100%;
-    background-color: black;
-    overflow-y: auto;
 }
 .scrollDiv{
     height: 100vh;
     overflow-y: auto;
+    margin-top: 120px;
+}
+.contMainSub{
+
 }
 
 .scrollDiv::-webkit-scrollbar {
@@ -133,3 +133,32 @@
     scrollbar-width: thin; 
     scrollbar-color: #bbb #f4f4f4; 
   }
+
+
+@media (max-width:1200px) and (min-width: 945px){
+    .formInputStyle{
+        width: 300px
+    }
+    .formTextAreastyle{
+        width: 300px;
+    }
+    .cancelBut{
+        width: 147px;
+    }
+    .doneBut{
+        width: 147px;
+    }
+    .MainimageFit{
+        height: 400px;
+        width: 500px;
+    }
+}
+@media (max-width:945px){
+    .EditLrContainer{
+        flex-direction: column;
+        align-items: center;
+    }
+    .contMainSub{
+        margin-bottom: 100px;
+    }
+}

@@ -3,7 +3,7 @@ import SubImageComp from "./subImageComp";
 
 function ImageHolders() {
     return (
-        <div>
+        <div class = "contMainSub">
             <MainImageComp />
             <SubImageComp/>
         </div>

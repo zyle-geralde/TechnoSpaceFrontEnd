@@ -1,9 +1,11 @@
 import MainImageComp from "./mainimageComp";
+import SubImageComp from "./subImageComp";
 
 function ImageHolders() {
     return (
         <div>
-            <MainImageComp/>
+            <MainImageComp />
+            <SubImageComp/>
         </div>
     )
 }

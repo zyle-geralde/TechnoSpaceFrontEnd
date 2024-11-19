@@ -1,5 +1,6 @@
 import '../styles/editlisting.css'
 import { useState } from 'react';
+import SubImageFitComp from './subimageFitComp';
 
 function SubImageComp() {
     var [defaultImg, setdefaultImg] = useState("./images/defaultImage.png")
@@ -7,9 +8,10 @@ function SubImageComp() {
     return (
         <div style={{ "display": "flex", "flexDirection":"column","alignItems":"center"}}>
             <div className='subImageCont'>
-                <div>
-                    <img src = ""></img>
-                </div>
+                <SubImageFitComp defaultImgProp={defaultImg} />
+                <SubImageFitComp defaultImgProp={defaultImg}/>
+                <SubImageFitComp defaultImgProp={defaultImg}/>
+                <SubImageFitComp defaultImgProp={defaultImg}/>
             </div>
             <div>
 

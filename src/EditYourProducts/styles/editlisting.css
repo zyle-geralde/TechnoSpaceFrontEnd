@@ -26,3 +26,14 @@
     display: flex;
     flex-direction: row;
 }
+.subImageFit{
+    height: 80px;
+    width: 100px;
+}
+.subImage{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    object-position: center;
+    border-radius: 3px;
+}

@@ -7,16 +7,15 @@ import BackComp from "../components/backcomp";
 function EditLearningResourcesPage() {
     return (
         <>
-            <div style={{ "height": "100vh", "overflowY":"hidden"}}>
+            <div style={{ "height": "100vh", "overflowY":"auto"}}>
                 <HeaderComp />
-                <BackComp/>
-                
-                <div style={{ "display": "flex", "flexDirection": "column", "alignItems": "center",}}>
-                    <div className="EditLrContainer">
-                        <ImageHolders />
-                        <FormFillComp/>
-                    </div>
+                <BackComp />
+                <div className="EditLrContainer">
+                    <ImageHolders />
+                    <FormFillComp />
                 </div>
+                {/*<div className="holdDivCont">
+                </div>*/}
             </div>
         </>
     )

@@ -15,9 +15,6 @@ function SubImageComp() {
                     ))
                 }
             </div>
-            <div>
-
-            </div>
         </div>
     )
 }

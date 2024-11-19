@@ -5,7 +5,7 @@ function MainImageComp() {
 
     var [defaultImg,setdefaultImg] = useState("./images/defaultImage.png")
     return (
-        <div style={{ "display": "flex", "flexDirection":"column","alignItems":"center","marginBottom":"50px"}}>
+        <div style={{ "display": "flex", "flexDirection":"column","alignItems":"center"}}>
             <div className="MainimageFit">
                 <img src={defaultImg} className='mainImage'></img>
             </div>

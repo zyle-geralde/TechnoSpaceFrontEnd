@@ -1,10 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-.main-div{
-  @apply bg-slate-200 h-screen w-screen flex flex-col;
+/* Font Families */
+.montserrat {
+  font-family: "Montserrat", sans-serif;
 }
+
+.poppins {
+  font-family: "Poppins", serif;
+}
+
+/* Flexbox and Layout Utilities */
+.main-div {
+  @apply h-screen w-screen flex flex-col;
+}
+
+.center {
+  @apply mx-auto my-auto;
+}
+
+.flex-vertical {
+  @apply flex flex-col;
+}
+
+.flex-horizontal {
+  @apply flex flex-row;
+}
+
+.nav-text-hover {
+  @apply transition-all hover:text-primary-color;
+}
+
+/* Sections */
+#left-part {
+  @apply w-screen justify-between;
+}
+
+#right-part {
+  @apply hidden;
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+  #right-part {
+    @apply flex;
+  }
+
+  #left-part {
+    @apply w-1/2 justify-start;
+  }
+}
+
+@media (min-width: 1440px) {
+  .landing-nav {
+    @apply px-96;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ::-webkit-scrollbar {
     width: 8px; 
   }

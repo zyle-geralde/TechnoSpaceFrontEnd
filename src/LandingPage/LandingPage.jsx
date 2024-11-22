@@ -1,9 +1,11 @@
 import '../index.css'
+import LandNav from './LandingPageNavigationBar';
 
 function LandingPage(){
     return (
         <div className="main-div">
-            <p className="mx-auto my-auto">Hello There</p>
+            <LandNav />
+            <p className="center montserrat font-bold text-6xl text-black">Hello There</p>
         </div>
     );
   }

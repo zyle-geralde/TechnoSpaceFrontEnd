@@ -11,6 +11,7 @@ import EditLearningResourcesPage from './EditYourProducts/pages/EditLearningReso
 import EditSchoolSuplliesPage from './EditYourProducts/pages/EditSchoolSupplies';
 import EditGadgets from './EditYourProducts/pages/EditGadgets';
 import EditOthers from './EditYourProducts/pages/EditOthers';
+import LandingPage  from './LandingPage/LandingPage.jsx';
 function App() {
     return (
         <Routes>
@@ -24,6 +25,7 @@ function App() {
             <Route path="/EditGadgets" element={<EditGadgets />} /> 
             <Route path="/EditOthers" element={<EditOthers />} /> 
             <Route path="*" element={<NotfundFunc />} />
+            <Route path="/" element={<LandingPage />} />
         </Routes>
     );
 

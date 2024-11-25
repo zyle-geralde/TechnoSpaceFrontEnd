@@ -1,3 +1,4 @@
+/* Tailwind and Custom Styles */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @tailwind base;
 @tailwind components;
@@ -12,141 +13,38 @@
   font-family: "Poppins", serif;
 }
 
-/* Flexbox and Layout Utilities */
-.main-div {
-  @apply h-screen w-screen flex flex-col;
+.nav-text-hover{
+  @apply hover:text-primary-color transition-all;
+}
+#container {
+  scroll-snap-type: y mandatory; 
+  overflow-y: scroll; 
+  height: 100vh;
+  scroll-behavior: smooth;
 }
 
-.center {
-  @apply mx-auto my-auto;
+.section {
+  @apply flex-col justify-start sm:px-2 h-fit md:flex md:gap-5 md:h-screen md:px-20 lg:px-32 xl:px-40 ; 
+  scroll-snap-align: start; /* Snap sections to the start */
+}
+#container > div > *{
+  @apply my-auto;
+}
+body::-webkit-scrollbar{
+  display: none;
 }
 
-.flex-vertical {
-  @apply flex flex-col;
+body{
+  overflow-y:hidden;
 }
 
-.flex-horizontal {
-  @apply flex flex-row;
+#container::-webkit-scrollbar{
+  width: 2px;
 }
-
-.nav-text-hover {
-  @apply transition-all hover:text-primary-color;
+#container::-webkit-scrollbar-thumb{
+  @apply bg-primary-color;
 }
-
-/* Sections */
-#left-part {
-  @apply w-screen justify-between;
-}
-
-#right-part {
-  @apply hidden;
-}
-
-/* Media Queries */
-@media (min-width: 768px) {
-  #right-part {
-    @apply flex;
-  }
-
-  #left-part {
-    @apply w-1/2 justify-start;
-  }
-}
-
-@media (min-width: 1440px) {
-  .landing-nav {
-    @apply px-96;
-  }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-::-webkit-scrollbar {
-    width: 8px; 
-  }
-  
-::-webkit-scrollbar-thumb {
-    background: #bbb; 
-    border-radius: 10px; 
-  }
-  
-::-webkit-scrollbar-thumb:hover {
-    background: #888; 
-  }
-  
-::-webkit-scrollbar-track {
-    background: #f4f4f4; 
-    border-radius: 10px;
-  }
-  
-
-html {
-    scrollbar-width: thin; 
-    scrollbar-color: #bbb #f4f4f4; 
-  }
-*{
-  transition: 0.2s;
+* {
+  transition: 0.4s;
+  scroll-behavior: smooth;
 }

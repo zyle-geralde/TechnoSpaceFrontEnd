@@ -81,7 +81,7 @@
 .formContMarg{
     margin-bottom: 5px;
 }
-.cancelBut{
+.cancelBut,.cancelButsend{
     color: white;
     font-size: 15px;
     font-weight: bold;
@@ -93,7 +93,7 @@
     cursor: pointer;
     text-align: center;
 }
-.doneBut{
+.doneBut,.doneButsend{
     color: white;
     font-size: 15px;
     font-weight: bold;

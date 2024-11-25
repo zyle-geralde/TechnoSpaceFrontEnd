@@ -11,7 +11,9 @@ import EditLearningResourcesPage from './EditYourProducts/pages/EditLearningReso
 import EditSchoolSuplliesPage from './EditYourProducts/pages/EditSchoolSupplies';
 import EditGadgets from './EditYourProducts/pages/EditGadgets';
 import EditOthers from './EditYourProducts/pages/EditOthers';
-import LandingPage  from './LandingPage/LandingPage.jsx';
+import LandingPage from './LandingPage/LandingPage.jsx';
+import SellListingView from './SellProducts/pages/CreateNewListing';
+import SellProductsInListing from './SellProducts/pages/SellProductsInListing.jsx';
 function App() {
     return (
         <Routes>
@@ -24,6 +26,8 @@ function App() {
             <Route path="/EditSchoolSupplies" element={<EditSchoolSuplliesPage />} /> 
             <Route path="/EditGadgets" element={<EditGadgets />} /> 
             <Route path="/EditOthers" element={<EditOthers />} /> 
+            <Route path="/SellListingView" element={<SellListingView />} /> 
+            <Route path="/SellProductsInListing" element={<SellProductsInListing />} /> 
             <Route path="*" element={<NotfundFunc />} />
             <Route path="/" element={<LandingPage />} />
         </Routes>

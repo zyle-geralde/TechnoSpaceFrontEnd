@@ -1,32 +1,29 @@
 import { MouseEvent } from "react";
 import { useState } from "react";
-import "../style/listingview.css"
-import HeaderComp from "../components/header";
-import ListingItems from "../components/listingItems";
+import "../../YourProduct/style/listingview.css"
+import HeaderComp from "../../YourProduct/components/header";
+import ListingItems from "../../YourProduct/components/listingItems";
 import { useNavigate } from "react-router-dom";
 
-function ListingView() {
-    var firstlayer = ['003-stationery 1.png', '002-graduation 1.png', '001-gadget 1.png', '004-application 1.png', 'hand.png']
-    var firstlayername = ['School Supplies', 'Learning Resources', 'Gadgets', 'Others', 'Sell Items']
-    var funcList = [navigateToSchoolSupplies, navigateToLearningResources, navigateToGadgets, navigateToOthers, navigateToSellItems]
+function SellListingView() {
+    var firstlayer = ['003-stationery 1.png', '002-graduation 1.png', '001-gadget 1.png', '004-application 1.png']
+    var firstlayername = ['School Supplies', 'Learning Resources', 'Gadgets', 'Others']
+    var funcList = [navigateToSchoolSupplies, navigateToLearningResources, navigateToGadgets, navigateToOthers]
 
 
     const navigate = useNavigate()
 
     function navigateToLearningResources() {
-        navigate("/Learningresourcesview")
+        navigate("/SellProductsInListing")
     }
     function navigateToSchoolSupplies() {
-        navigate("/Schoolsuppliesview")
+        navigate("/SellProductsInListing")
     }
     function navigateToGadgets() {
-        navigate("/Gadgetsview")
+        navigate("/SellProductsInListing")
     }
     function navigateToOthers() {
-        navigate("/Othersview")
-    }
-    function navigateToSellItems() {
-        navigate("/SellListingView")
+        navigate("/SellProductsInListing")
     }
     return (
         <>
@@ -34,7 +31,7 @@ function ListingView() {
                 <HeaderComp />
                 <div className="containListing">
                     <div className="listingsContainer">
-                        <div className="ListingTitle">Choose Listing Type</div>
+                        <div className="ListingTitle">Sell Listing Type</div>
                     </div>
                     <div className="layerCont">
                         <div className="firstlayer">
@@ -49,4 +46,4 @@ function ListingView() {
     )
 }
 
-export default ListingView;
+export default SellListingView;

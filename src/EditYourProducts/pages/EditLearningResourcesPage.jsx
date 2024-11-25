@@ -19,7 +19,7 @@ function EditLearningResourcesPage() {
                 </div>
                 <div className="EditLrContainer">
                     <ImageHolders />
-                    <FormFillComp />
+                    <FormFillComp fromEdit = "Yes" />
                 </div>
             </div>
         </>

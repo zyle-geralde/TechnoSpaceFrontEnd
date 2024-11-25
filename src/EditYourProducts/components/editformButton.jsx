@@ -24,6 +24,21 @@ function EditFormButton(props) {
                 {props.ButtonName}
             </div>)
         }
+        else if (props.ButtonName === "Cancel") {
+            return(<div className={props.classIndic}>
+              {props.ButtonName}
+            </div>)
+        }
+        else if (props.ButtonName === "Upload") {
+            return(<div className={props.classIndic}>
+              {props.ButtonName}
+            </div>)
+        }
+        else if (props.ButtonName === "Done") {
+            return(<div className={props.classIndic}>
+              {props.ButtonName}
+            </div>)
+        }
         else {
             return(<div className={props.classIndic}>
                 {props.ButtonName}

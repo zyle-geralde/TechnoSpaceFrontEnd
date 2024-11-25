@@ -150,10 +150,10 @@
     .formTextAreastyle{
         width: 300px;
     }
-    .cancelBut{
+    .cancelBut,.cancelButsend{
         width: 147px;
     }
-    .doneBut{
+    .doneBut,.doneButsend{
         width: 147px;
     }
     .MainimageFit{
@@ -201,10 +201,10 @@
     .formTextAreastyle{
         width: 300px;
     }
-    .cancelBut{
+    .cancelBut,.cancelButsend{
         width: 145px;
     }
-    .doneBut{
+    .doneBut,.doneButsend{
         width: 145px;
     }
     .subImageFit{
@@ -234,10 +234,10 @@
     .formTextAreastyle{
         width: 180px;
     }
-    .cancelBut{
+    .cancelBut,.cancelButsend{
         width: 90px;
     }
-    .doneBut{
+    .doneBut,.doneButsend{
         width: 90px;
     }
     .subImageFit{

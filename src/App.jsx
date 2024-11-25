@@ -14,6 +14,7 @@ import EditOthers from './EditYourProducts/pages/EditOthers';
 import LandingPage from './LandingPage/LandingPage.jsx';
 import SellListingView from './SellProducts/pages/CreateNewListing';
 import SellProductsInListing from './SellProducts/pages/SellProductsInListing.jsx';
+import YourCustomerPage from './YourCustomerPurchase/pages/YourCustomerPage.jsx';
 function App() {
     return (
         <Routes>
@@ -27,7 +28,8 @@ function App() {
             <Route path="/EditGadgets" element={<EditGadgets />} /> 
             <Route path="/EditOthers" element={<EditOthers />} /> 
             <Route path="/SellListingView" element={<SellListingView />} /> 
-            <Route path="/SellProductsInListing" element={<SellProductsInListing />} /> 
+            <Route path="/SellProductsInListing" element={<SellProductsInListing />} />
+            <Route path="/YourCustomerPurchase" element={<YourCustomerPage />} /> 
             <Route path="*" element={<NotfundFunc />} />
             <Route path="/" element={<LandingPage />} />
         </Routes>

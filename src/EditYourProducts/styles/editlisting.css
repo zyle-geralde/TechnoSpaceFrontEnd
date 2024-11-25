@@ -58,6 +58,10 @@
     width: 400px;
     font-size: 15px;
     padding: 5px;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 2px;
+    border-color: rgb(186, 186, 186);
 }
 .formNamestyle{
     font-weight: bold;
@@ -69,6 +73,10 @@
     font-size: 15px;
     padding: 5px;
     height: 100px;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 2px;
+    border-color: rgb(186, 186, 186);
 }
 .formContMarg{
     margin-bottom: 5px;

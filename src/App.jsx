@@ -15,7 +15,18 @@ import LandingPage from './LandingPage/LandingPage.jsx';
 import SellListingView from './SellProducts/pages/CreateNewListing';
 import SellProductsInListing from './SellProducts/pages/SellProductsInListing.jsx';
 import YourCustomerPage from './YourCustomerPurchase/pages/YourCustomerPage.jsx';
+import { useLocation } from 'react-router-dom';
 function App() {
+    const location = useLocation();
+    useEffect(() => {
+        const body = document.body;
+        if (location.pathname === "/") {
+            body.classList.add("no-scroll-styles");
+        } else {
+            body.classList.remove("no-scroll-styles");
+        }
+    }, [location]);
+
     return (
         <Routes>
             <Route path="/Yourproducts" element={<ListingView></ListingView>} />

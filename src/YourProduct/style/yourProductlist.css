@@ -3,15 +3,19 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin-top: 15px;
     margin-left: 30px;
-    margin-top: 90px;
+    margin-top: 60px;
 }
 .backButton{
-    width: 25px;
-    height: 20px;
+    width: 20px;
+    height: 15px;
     cursor: pointer;
     margin-right: 30px;
+    transition: 0.2s;
+}
+.backButton:hover{
+    width: 25px;
+    height: 20px;
 }
 .filterButton{
     max-width: 25px;
@@ -22,6 +26,15 @@
     height: 25px;
     padding: 0px;
     cursor: pointer;
+    transition: 0.2s;
+}
+.filterButton:hover{
+    max-width: 30px;
+    max-height: 30px;
+    min-width: 30px;
+    min-height: 30px;
+    width: 30px;
+    height: 30px;
 }
 .searchInput{
     padding: 10px 10px;
@@ -37,19 +50,19 @@
 
 .productGrid{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    column-gap: 15px;
-    row-gap: 15px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 30px;
+    row-gap: 20px;
     overflow-y: auto;
     padding-bottom: 20px;
 }
 .titleTextstyle{
-    font-size: 35px;
+    font-size: 30px;
     font-weight: bold;
     color: #800000;
     margin-left: 5%;
-    margin-bottom: 30px;
-    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-top: 0px;
 }
 .pGridView{
     display:flex;
@@ -62,6 +75,16 @@
     width: 250px;
     cursor: pointer;
     background-color: #F3F3F3;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(107, 107, 107, 0.3);
+    padding: 7px;
+    transition: 0.2s;
+}
+.cardProd:hover{
+    height: 300px;
+    width: 250px;
+    cursor: pointer;
+    background-color: rgba(107, 107, 107, 0.23);
     border-radius: 10px;
     box-shadow: 0 0 5px rgba(107, 107, 107, 0.3);
     padding: 7px;
@@ -71,6 +94,7 @@
     object-position:right;
     height: 100%;
     width: 100%;
+    border-radius: 5px;
 }
 .prodCardName{
     text-overflow: ellipsis;
@@ -85,31 +109,16 @@
 .scrollable-container {
     flex: 1;
     overflow-y: auto; 
+    scroll-snap-type: y mandatory; 
+    scroll-behavior: smooth;
   }
-  
-
-  .scrollable-container::-webkit-scrollbar {
-    width: 8px; 
+.scrollable-container::-webkit-scrollbar {
+    width: 4px;
+    display:block;
   }
   
   .scrollable-container::-webkit-scrollbar-thumb {
-    background: #bbb; 
-    border-radius: 10px; 
-  }
-  
-  .scrollable-container::-webkit-scrollbar-thumb:hover {
-    background: #888; 
-  }
-  
-  .scrollable-container::-webkit-scrollbar-track {
-    background: #f4f4f4; 
-    border-radius: 10px;
-  }
-  
-
-  .scrollable-container {
-    scrollbar-width: thin; 
-    scrollbar-color: #bbb #f4f4f4; 
+    @apply bg-primary-color;
   }
 
 
@@ -143,5 +152,10 @@
 @media (max-width:575px){
     .productGrid{
         grid-template-columns: 1fr;
+    }
+}
+@media(max-width:392px){
+    .searchsecCont{
+        margin-top: 75px;
     }
 }

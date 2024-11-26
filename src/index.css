@@ -64,6 +64,6 @@ body:not(.no-scroll-styles)::-webkit-scrollbar-thumb {
   @apply bg-primary-color;
 }
 * {
-  transition: 0.4s;
+  transition: 0.2s;
   scroll-behavior: smooth;
 }

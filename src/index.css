@@ -31,11 +31,17 @@
   @apply my-auto;
 }
 body::-webkit-scrollbar{
-  display: none;
+  width: 4px;
+}
+body::-webkit-scrollbar-thumb{
+  @apply bg-primary-color;
 }
 
 body{
-  overflow-y:hidden;
+  scroll-snap-type: y mandatory; 
+  overflow-y:auto;
+  scroll-behavior: smooth;
+
 }
 
 #container::-webkit-scrollbar{

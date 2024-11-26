@@ -13,6 +13,10 @@
 .Purchaselink:hover{
     color: #800000;
 }
+.SellTop{
+    margin-top: 35px;
+    margin-left: 35px;
+}
 .headerBar{
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
@@ -191,5 +195,11 @@
     }
     .firstlayer:has(.categoryContainer:nth-child(4):last-child) .categoryContainer {
         grid-column: span 1; /* Adjust all children to span 1 */
+    }
+}
+@media (max-width:392px){
+    .SellTop{
+        margin-top: 50px;
+        margin-left: 20px;
     }
 }

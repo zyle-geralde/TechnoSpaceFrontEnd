@@ -22,7 +22,7 @@ function FormFillComp(props) {
         }
     }
     return (
-        <div style={{ "marginLeft": "50px" }}>
+        <div className='formmarg'>
             <FormLabelComp formName="Title" typeform="formT" />
             <FormLabelComp formName="Project Description" typeform="textT" />
             <FormLabelComp formName="Project Specification" typeform="textT" />

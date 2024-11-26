@@ -26,7 +26,7 @@ function ListingView() {
         navigate("/Othersview")
     }
     function navigateToSellItems() {
-        navigate("/SellItemsview")
+        navigate("/SellListingView")
     }
     return (
         <>

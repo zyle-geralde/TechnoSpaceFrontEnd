@@ -5,7 +5,7 @@
     align-items: center;
     margin-top: 15px;
     margin-left: 30px;
-    margin-top: 110px;
+    margin-top: 90px;
 }
 .backButton{
     width: 25px;
@@ -14,8 +14,13 @@
     margin-right: 30px;
 }
 .filterButton{
+    max-width: 25px;
+    max-height: 25px;
+    min-width: 25px;
+    min-height: 25px;
     width: 25px;
     height: 25px;
+    padding: 0px;
     cursor: pointer;
 }
 .searchInput{
@@ -24,6 +29,10 @@
     font-size: 15px;
     width: 600px;
     margin-right: 10px;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 5px;
+    border-color: rgb(186, 186, 186);
 }
 
 .productGrid{

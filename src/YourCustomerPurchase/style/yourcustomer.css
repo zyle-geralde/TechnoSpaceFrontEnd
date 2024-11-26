@@ -1,0 +1,109 @@
+.SorderCont{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    box-shadow: 0px 0px 5px rgb(172, 172, 172);
+    width: 80%;
+    border-radius: 5px;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.firstHalf{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.secondHalf{
+    display: flex;
+    flex-direction: row;
+}
+.ImageProdCont{
+    height: 80px;
+    width: 100px;
+    margin: 10px;
+    overflow: hidden;
+}
+.productcImage{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 2px;
+}
+.CheckMarkPurch{
+    font-size: 25px;
+    background-color: #027A48;
+    color: white;
+    font-weight: bold;
+    padding: 5px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+.RemoveMarkPurch{
+    font-size: 25px;
+    background-color: #800000;
+    color: white;
+    font-weight: bold;
+    padding: 5px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+.f1t,.f2t,.f3t{
+    max-width: 800px;
+    overflow:hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: block; 
+}
+
+@media(max-width: 1350px) and (min-width:960px){
+    .f1t,.f2t,.f3t{
+        max-width: 500px;
+    }
+    
+}
+@media(max-width:960px) and (min-width:720px){
+    .f1t,.f2t,.f3t{
+        max-width: 300px;
+    }
+}
+@media(max-width:720px) and (min-width: 540px){
+    .f1t,.f2t,.f3t{
+        max-width: 150px;
+    }
+}
+
+@media(max-width: 540px) and (min-width:452px){
+    .SorderCont{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+    .secondHalf{
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 10px;
+        margin-left: 10px;
+    }
+    .f1t,.f2t,.f3t{
+        max-width: 200px;
+    }
+}
+@media(max-width: 452px){
+    .SorderCont{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+    .secondHalf{
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 10px;
+        margin-left: 10px;
+    }
+    .f1t,.f2t,.f3t{
+        max-width: 100px;
+    }
+}

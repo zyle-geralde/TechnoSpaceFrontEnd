@@ -1,15 +1,14 @@
 
-
 import HeaderComp from "../../YourProduct/components/header";
-import ImageHolders from "../components/imageholders";
-import '../styles/editlisting.css'
-import FormFillComp from "../components/formfillcomp";
-import BackComp from "../components/backcomp";
+import ImageHolders from "../../EditYourProducts/components/imageholders";
+import '../../EditYourProducts/styles/editlisting.css'
+import FormFillComp from "../../EditYourProducts/components/formfillcomp";
+import BackComp from "../../EditYourProducts//components/backcomp";
 import { useNavigate } from "react-router-dom";
-function EditOthers() {
+function SellProductsInListing() {
     const navigate = useNavigate();
     function navtoBack() {
-        navigate("/Othersview")
+        navigate("/SellListingView")
     }
     return (
         <>
@@ -20,11 +19,11 @@ function EditOthers() {
                 </div>
                 <div className="EditLrContainer">
                     <ImageHolders />
-                    <FormFillComp fromEdit = "Yes" />
+                    <FormFillComp fromEdit={"No"} />
                 </div>
             </div>
         </>
     )
 }
 
-export default EditOthers;
+export default SellProductsInListing;

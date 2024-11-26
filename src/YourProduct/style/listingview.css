@@ -110,6 +110,10 @@
     min-height: 200px;
     border-radius: 10px;
     cursor: pointer;
+    transition: 0.2s;
+}
+.categoryContainer:hover{
+    background-color: rgba(174, 174, 174, 0.188);
 }
 .categoryImage{
     height: 100px;

@@ -17,6 +17,7 @@ import SellProductsInListing from './SellProducts/pages/SellProductsInListing.js
 import YourCustomerPage from './YourCustomerPurchase/pages/YourCustomerPage.jsx';
 import LogInPage from './LogInSignUp/pages/LogInPage.jsx';
 import { useLocation } from 'react-router-dom';
+
 function App() {
     const location = useLocation();
     useEffect(() => {

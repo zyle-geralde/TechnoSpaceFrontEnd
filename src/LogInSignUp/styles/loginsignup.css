@@ -5,8 +5,55 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    overflow:auto
 }
 .logInCont{
-    min-height: 100px;
+    padding: 20px;
+    min-height: 550px;
+    height: 550px;
+    max-height: 550px;
+    min-width: 990px;
+    max-width: 990px;
+    width: 990px;
     background-color: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    margin:30px;
+}
+.imageCont{
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+}
+.imageSelf{
+    object-position: center;
+    object-fit: cover;
+}
+
+.logInformCont{
+    width: 50%;
+    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.TitleLog{
+    font-weight: bold;
+    font-size: 30px;
+    margin-top: 30px;
+}
+.emailInp{
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 5px;
+}
+.forInpCont{
+    width: 350px;
+}
+
+@media (max-height:668px){
+    .LogInMainCont{
+        align-items: start;
+    }
 }

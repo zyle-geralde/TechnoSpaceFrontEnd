@@ -1,0 +1,12 @@
+.LogInMainCont{
+    background: linear-gradient(to top right,#800000, #c96400,#FFDF00);
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.logInCont{
+    min-height: 100px;
+    background-color: white;
+}

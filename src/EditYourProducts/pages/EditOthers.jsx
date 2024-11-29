@@ -14,7 +14,7 @@ function EditOthers() {
     return (
         <>
             <HeaderComp />
-            <div style={{ "paddingTop": "90px" }}>
+            <div className="ContadjustTop">
                 <div style={{"marginLeft":"5%"}}>
                     <BackComp onFunc={navtoBack} />
                 </div>

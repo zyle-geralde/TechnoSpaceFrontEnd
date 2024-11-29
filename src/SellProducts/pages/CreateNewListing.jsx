@@ -35,10 +35,10 @@ function SellListingView() {
 
                 <HeaderComp onFunc={navigateToBack} />
                 <div className="containListing">
-                    <div style={{"marginTop":"50px","marginLeft":"40px"}}>
+                    <div className="SellTop">
                         <BackComp onFunc={navigateToBack} />
                     </div>
-                    <div className="listingsContainer" style={{"marginTop":"20px"}}>
+                    <div className="listingsContainer" style={{"marginTop":"10px"}}>
                         <div className="ListingTitle">Sell Listing Type</div>
                     </div>
                     <div className="layerCont">

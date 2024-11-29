@@ -1,3 +1,9 @@
+.formmarg{
+    margin-left: 50px;
+}
+.ContadjustTop{
+    padding-top: 65px;
+}
 .EditLrContainer{
     @apply flex flex-row ;
 }
@@ -75,6 +81,13 @@
     margin-right: 5px;
     cursor: pointer;
     text-align: center;
+    transition: 0.2s;
+}
+.cancelBut:hover{
+    background-color: #852c2cc4;
+}
+.cancelButsend:hover{
+    background-color: #852c2cc4;
 }
 .doneBut,.doneButsend{
     color: white;
@@ -86,6 +99,12 @@
     background-color: #027A48;
     cursor: pointer;
     text-align: center;
+}
+.doneBut:hover{
+    background-color: #3a785e;
+}
+.doneButsend:hover{
+    background-color: #3a785e;
 }
 .changeDistance{
     display: flex;
@@ -150,7 +169,10 @@
         align-items: center;
     }
     .contMainSub{
-        margin-bottom: 100px;
+        margin-bottom: 70px;
+    }
+    .formmarg{
+        margin-left: 0px;
     }
 }
 @media (max-width:690px) and (min-width:560px){
@@ -159,11 +181,14 @@
         align-items: center;
     }
     .contMainSub{
-        margin-bottom: 100px;
+        margin-bottom: 70px;
     }
     .MainimageFit{
         height: 400px;
         width: 500px;
+    }
+    .formmarg{
+        margin-left: 0px;
     }
 }
 @media(max-width:560px) and (min-width:420px){
@@ -176,7 +201,7 @@
         align-items: center;
     }
     .contMainSub{
-        margin-bottom: 100px;
+        margin-bottom: 50px;
     }
     .formInputStyle{
         width: 300px
@@ -198,6 +223,9 @@
     .addsubImage{
         margin-top: -45px;
     }
+    .formmarg{
+        margin-left: 0px;
+    }
 }
 @media(max-width:420px){
     .MainimageFit{
@@ -209,7 +237,7 @@
         align-items: center;
     }
     .contMainSub{
-        margin-bottom: 100px;
+        margin-bottom: 35px;
     }
     .formInputStyle{
         width: 180px
@@ -230,5 +258,13 @@
     }
     .addsubImage{
         margin-top: -35px;
+    }
+    .formmarg{
+        margin-left: 0px;
+    }
+}
+@media (max-width:392px){
+    .ContadjustTop{
+        padding-top: 80px;
     }
 }

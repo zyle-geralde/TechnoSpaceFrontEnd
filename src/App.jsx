@@ -16,6 +16,7 @@ import SellListingView from './SellProducts/pages/CreateNewListing';
 import SellProductsInListing from './SellProducts/pages/SellProductsInListing.jsx';
 import YourCustomerPage from './YourCustomerPurchase/pages/YourCustomerPage.jsx';
 import LogInPage from './LogInSignUp/pages/LogInPage.jsx';
+import SignUpPage from './LogInSignUp/pages/SignUpPage.jsx';
 import { useLocation } from 'react-router-dom';
 
 function App() {
@@ -43,6 +44,7 @@ function App() {
             <Route path="/SellListingView" element={<SellListingView />} /> 
             <Route path="/SellProductsInListing" element={<SellProductsInListing />} />
             <Route path="/LogIn" element={<LogInPage />} /> 
+            <Route path="/SignUp" element={<SignUpPage />} /> 
             <Route path="/YourCustomerPurchase" element={<YourCustomerPage />} /> 
             <Route path="*" element={<NotfundFunc />} />
             <Route path="/" element={<LandingPage />} />

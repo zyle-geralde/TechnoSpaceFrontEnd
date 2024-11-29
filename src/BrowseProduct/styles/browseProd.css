@@ -1,0 +1,176 @@
+.searchsecCont{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 30px;
+    margin-top: 60px;
+}
+.backButton{
+    width: 20px;
+    height: 15px;
+    cursor: pointer;
+    margin-right: 30px;
+    transition: 0.2s;
+}
+.backButton:hover{
+    width: 25px;
+    height: 20px;
+}
+.filterButton{
+    max-width: 25px;
+    max-height: 25px;
+    min-width: 25px;
+    min-height: 25px;
+    width: 25px;
+    height: 25px;
+    padding: 0px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.filterButton:hover{
+    max-width: 30px;
+    max-height: 30px;
+    min-width: 30px;
+    min-height: 30px;
+    width: 30px;
+    height: 30px;
+}
+.searchInput{
+    padding: 10px 10px;
+    padding-right: 40px;
+    font-size: 15px;
+    width: 600px;
+    margin-right: 10px;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 5px;
+    border-color: rgb(186, 186, 186);
+}
+
+.productGrid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 30px;
+    row-gap: 20px;
+    overflow-y: auto;
+    padding-bottom: 20px;
+}
+.titleTextstyle{
+    font-size: 30px;
+    font-weight: bold;
+    color: #800000;
+    margin-left: 5%;
+    margin-bottom: 10px;
+    margin-top: 0px;
+}
+.pGridView{
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+
+}
+.cardProd{
+    height: 300px;
+    width: 250px;
+    cursor: pointer;
+    background-color: #F3F3F3;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(107, 107, 107, 0.3);
+    padding: 7px;
+    transition: 0.2s;
+}
+.cardProd:hover{
+    height: 300px;
+    width: 250px;
+    cursor: pointer;
+    background-color: rgba(107, 107, 107, 0.23);
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(107, 107, 107, 0.3);
+    padding: 7px;
+}
+.prodCardImage{
+    object-fit: cover;
+    object-position:right;
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+}
+.prodCardName{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-weight: bold;
+    font-size: 20px;
+}
+.browseSubHead{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.browseTitlesubhead{
+    display: flex;
+    flex-direction: row;
+    margin-left: 20px;
+    margin-top: 10px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.browsedorphead{
+    margin-left: 20px;
+}
+
+
+/* For ScrollBar*/
+.scrollable-container {
+    flex: 1;
+    overflow-y: auto; 
+    scroll-snap-type: y mandatory; 
+    scroll-behavior: smooth;
+  }
+.scrollable-container::-webkit-scrollbar {
+    width: 4px;
+    display:block;
+  }
+  
+  .scrollable-container::-webkit-scrollbar-thumb {
+    @apply bg-primary-color;
+  }
+
+
+@media(max-width:800px) and (min-width:560px){
+    .searchInput{
+        width: 400px;
+    }
+}
+
+@media(max-width:560px){
+    .searchInput{
+        width: 100%;
+    }
+}
+@media (max-width:1450px) and (min-width:1160px){
+    .productGrid{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+@media (min-width:860px) and (max-width:1160px){
+    .productGrid{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media (max-width:860px) and (min-width:575px){
+    .productGrid{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media (max-width:575px){
+    .productGrid{
+        grid-template-columns: 1fr;
+    }
+}
+@media(max-width:392px){
+    .searchsecCont{
+        margin-top: 75px;
+    }
+}

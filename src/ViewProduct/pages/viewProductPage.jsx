@@ -58,14 +58,7 @@ function ViewProductPage() {
                         <div className="ProdSpecification">
                             asjkdfnjksanfkjsndfkjsandkfjnasdkjfnasdjkfndaskjnksajfasjkdfnjksanfkjsndfkjsandkfjnasdkjfnasdjkfndaskjnksajf
                             asjkdfnjksanfkjsndfkjsandkfjnasdkjfnasdjkfndaskjnksajfasjkdfnjksanfkjsndfkjsandkfjnasdkjfnasdjkfndaskjnksajf
-                            asjkdfnjksanfkjsndfkjsandkfjnasdkjfnasdjkfndaskjnksajfasjkdfnjksanfkjsndfkjsandkfjnasdkjfnasdjkfndaskjnksajf
-                            asjkdfnjksanfkjsndfkjsandkfjnasdkjfnasdjkfndaskjnksajfasjkdfnjksanfkjsndfkjsandkfjnasdkjfnasdjkfndaskjnksajf
-                            asjkdfnjksanfkjsndfkjsandkfjnasdkjfnasdjkfndaskjnksajfasjkdfnjksanfkjsndfkjsandkfjnasdkjfnasdjkfndaskjnksajf
-                            asjkdfnjksanfkjsndfkjsandkfjnasdkjfnasdjkfndaskjnksajfasjkdfnjksanfkjsndfkjsandkfjnasdkjfnasdjkfndaskjnksajf
-                            asjkdfnjksanfkjsndfkjsandkfjnasdkjfnasdjkfndaskjnksajfasjkdfnjksanfkjsndfkjsandkfjnasdkjfnasdjkfndaskjnksajf
-                            asjkdfnjksanfkjsndfkjsandkfjnasdkjfnasdjkfndaskjnksajfasjkdfnjksanfkjsndfkjsandkfjnasdkjfnasdjkfndaskjnksajf
-                            asjkdfnjksanfkjsndfkjsandkfjnasdkjfnasdjkfndaskjnksajfasjkdfnjksanfkjsndfkjsandkfjnasdkjfnasdjkfndaskjnksajf
-                            asjkdfnjksanfkjsndfkjsandkfjnasdkjfnasdjkfndaskjnksajfasjkdfnjksanfkjsndfkjsandkfjnasdkjfnasdjkfndaskjnksajf
+
 
                         </div>
                         <div style={{"fontWeight":"bold","marginTop":"10px"}}>Available Schedule</div>

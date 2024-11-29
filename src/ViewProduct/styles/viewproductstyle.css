@@ -6,6 +6,8 @@
     margin-top: 10px;
     width: 1200px;
     margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 .divmain{
     display: flex;
@@ -102,4 +104,64 @@
   .containInfo::-webkit-scrollbar-thumb {
     @apply bg-primary-color;
   }
+
+@media (max-width:940px){
+    .contianmainProd{
+        min-height: 680px;
+        display: flex;
+        flex-direction: column;
+    
+        margin-top: 10px;
+        width: 1200px;
+        margin-bottom: 20px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .firstHalfprod{
+        align-items: center;
+        margin-right: 0px;
+    }
+    .secondHalfprod{
+        margin-right: 0px;
+        margin-left: 20px;
+    }
+}
+@media(max-width:710px){
+    .mainImageCont{
+        height: 450px;
+        width: 550px;
+    }
+}
+@media(max-width:610px){
+    .mainImageCont{
+        height: 350px;
+        width: 450px;
+    }
+    .subImagesubCont{
+        height: 50px;
+        width: 70px;
+        overflow: hidden;
+        margin-top: 10px;
+        margin-right: 3px;
+        margin-left: 3px;
+    }
+}
+@media(max-width:520px){
+    .mainImageCont{
+        height: 200px;
+        width: 300px;
+    }
+    .subImagesubCont{
+        height: 40px;
+        width: 60px;
+        overflow: hidden;
+        margin-top: 10px;
+        margin-right: 3px;
+        margin-left: 3px;
+    }
+    .secondHalfprod{
+        margin-right: 0px;
+        margin-left: 10px;
+    }
+}
 

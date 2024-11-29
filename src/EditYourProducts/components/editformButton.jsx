@@ -75,24 +75,24 @@ function EditFormButton(props) {
       >
         <div className="modal-dialog" role="document">
           <div className="modal-content">
-            <div className="modal-header">
-              <h5 className="modal-title" id="sellModalLabel">
+            <div className="modal-header" style={{"display":"flex","flexDirection":"row","justifyContent":"center"}}>
+              <h5 className="modal-title" id="sellModalLabel" style={{"fontWeight":"bold","fontSize":"18px"}}>
                 Sell
               </h5>
             </div>
-            <div className="modal-body">Are the information correct?</div>
-            <div className="modal-footer">
+            <div className="modal-body" style={{"display":"flex","flexDirection":"row","justifyContent":"center"}}>Are the information correct?</div>
+            <div className="modal-footer" style={{"display":"flex","flexDirection":"row","justifyContent":"center"}}>
               <button
                 type="button"
                 className="btn btn-secondary"
                 data-dismiss="modal"
                 aria-label="Close" onClick={handleCloseModalsell}
-                                
+                style={{"backgroundColor":"white","borderStyle":"solid","borderWidth":"1px","borderColor":"black","color":"black"}}        
               >
-                No
+                Cancel
               </button>
-              <button type="button" className="btn btn-primary">
-                Yes
+              <button type="button" className="btn" style={{"backgroundColor":"#800000c4","color":"white"}}>
+                Confirm
               </button>
             </div>
           </div>
@@ -111,24 +111,24 @@ function EditFormButton(props) {
       >
         <div className="modal-dialog" role="document">
           <div className="modal-content">
-            <div className="modal-header">
-              <h5 className="modal-title" id="exampleModalLabel">
+            <div className="modal-header" style={{"display":"flex","flexDirection":"row","justifyContent":"center"}}>
+              <h5 className="modal-title" id="exampleModalLabel" style={{"fontWeight":"bold","fontSize":"18px"}}>
                 Delete
               </h5>
             </div>
-            <div className="modal-body">Are you sure you want to delete?</div>
-            <div className="modal-footer">
+            <div className="modal-body" style={{"display":"flex","flexDirection":"row","justifyContent":"center"}}>Are you sure you want to delete?</div>
+            <div className="modal-footer" style={{"display":"flex","flexDirection":"row","justifyContent":"center"}}>
               <button
                 type="button"
                 className="btn btn-secondary"
                 data-dismiss="modal"
                 aria-label="Close" onClick={handleCloseModal}
-                                
+                style={{"backgroundColor":"white","borderStyle":"solid","borderWidth":"1px","borderColor":"black","color":"black"}}             
               >
-                No
+                Cancel
               </button>
-              <button type="button" className="btn btn-primary">
-                Yes
+              <button type="button" className="btn" style={{"backgroundColor":"#800000c4","color":"white"}}>
+                Confirm
               </button>
             </div>
           </div>

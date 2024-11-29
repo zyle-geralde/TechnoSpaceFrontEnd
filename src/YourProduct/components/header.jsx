@@ -9,7 +9,7 @@ function HeaderComp() {
         <>
             <div className="headerBar">
                 <div>
-                    <a href="/Yourproducts" className="Productslink">Products</a>
+                    <a href="/BrowseProduct" className="Productslink">Products</a>
                     <a href="/Yourproducts" className="YourProductslink">Your Products</a>
                     <a href="/Yourproducts" className="Purchaselink">Purchase History</a>
                 </div>

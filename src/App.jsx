@@ -19,6 +19,7 @@ import LogInPage from './LogInSignUp/pages/LogInPage.jsx';
 import SignUpPage from './LogInSignUp/pages/SignUpPage.jsx';
 import { useLocation } from 'react-router-dom';
 import BrowsePage from './BrowseProduct/pages/BrowsePage.jsx';
+import ViewProductPage from './ViewProduct/pages/viewProductPage.jsx';
 
 function App() {
     const location = useLocation();
@@ -48,6 +49,7 @@ function App() {
             <Route path="/SignUp" element={<SignUpPage />} /> 
             <Route path="/BrowseProduct" element={<BrowsePage />} />
             <Route path="/YourCustomerPurchase" element={<YourCustomerPage />} /> 
+            <Route path="/ViewProduct" element={<ViewProductPage />} /> 
             <Route path="*" element={<NotfundFunc />} />
             <Route path="/" element={<LandingPage />} />
         </Routes>

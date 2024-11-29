@@ -1,0 +1,42 @@
+.contianmainProd{
+    min-height: 680px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 10px;
+}
+.divmain{
+    display: flex;
+    flex-direction:column;
+}
+.firstHalfprod{
+    display: flex;
+    flex-direction:column;
+
+}
+.mainImageCont{
+    height: 550px;
+    width: 650px;
+    overflow: hidden;
+}
+.mainImage,.subImage{
+    object-fit: cover;
+    object-position: center;
+}
+.subImageCont{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.subImagesubCont{
+    height: 100px;
+    width: 120px;
+    overflow: hidden;
+    margin-top: 15px;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+.subImage{
+    object-fit: cover;
+    object-position: center;
+}

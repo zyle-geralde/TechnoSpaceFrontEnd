@@ -1,9 +1,20 @@
 import "../styles/viewproductstyle.css"
 import HeaderComp from "../../YourProduct/components/header";
+import BackComp from "../../EditYourProducts/components/backcomp";
+import { useNavigate } from "react-router-dom";
 
 function ViewProductPage() {
+    const navigate = useNavigate();
+
+    function goback() {
+        navigate("/BrowseProduct")
+    }
     return <>
         <HeaderComp />
+        <div style={{"position":"absolute","top":"60px","left":"30px"}}>
+            <BackComp onFunc = {goback} />
+        </div>
+
         <div className="divmain">
             <div className="contianmainProd">
                 <div className="firstHalfprod">

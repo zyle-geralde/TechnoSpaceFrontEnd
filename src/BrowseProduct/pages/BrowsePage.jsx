@@ -11,7 +11,7 @@ function BrowsePage() {
     const navigate = useNavigate();
     var [droptitle,setdroptitle] = useState("All")
     function OpenProd() {
-        navigate("/BrowseProduct")
+        navigate("/ViewProduct")
     }
     function changeAll() {
         setdroptitle("All")

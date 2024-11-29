@@ -114,6 +114,10 @@
         width: 0%;
         display: none;
     }
+    .imageContSign{
+        width: 0%;
+        display: none;
+    }
     .logInCont{
         padding: 20px;
         min-width: 495px;
@@ -132,12 +136,14 @@
         width: 495px;
         border-radius: 10px;
         margin:30px;
-        min-height: 450px;
-        height: 450px;
-        max-height: 450px;
     }
     .logInformCont{
         width: 100%;
+        margin-right: 0px;
+    }
+    .signUpformCont{
+        width: 100%;
+        margin-left: 0px;
     } 
 }
 @media (max-width:560px){
@@ -152,10 +158,27 @@
         height: 450px;
         max-height: 450px;
     }
+    .signUpCont{
+        padding: 20px;
+        min-width: 295px;
+        max-width: 295px;
+        width: 295px;
+        border-radius: 10px;
+        margin:30px;
+    }
     .logInformCont{
         width: 100%;
+        margin-right: 0px;
+    }
+    .signUpformCont{
+        width: 100%;
+        margin-left: 0px;
     }
     .imageCont{
+        width: 0%;
+        display: none;
+    }
+    .imageContSign{
         width: 0%;
         display: none;
     }

@@ -82,6 +82,8 @@
     word-break: break-all;
     max-height: 700px;
     overflow: auto;
+    margin-top: 5px;
+    min-height: 450px;
 }
 .PurchProd{
     background-color: #800000;

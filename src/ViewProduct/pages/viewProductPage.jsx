@@ -49,6 +49,10 @@ function ViewProductPage() {
                             asjkdfnjksanfkjsndfkjsandkfjnasdkjfnasdjkfndaskjnksajfasjkdfnjksanfkjsndfkjsandkfjnasdkjfnasdjkfndaskjnksajf
                             asjkdfnjksanfkjsndfkjsandkfjnasdkjfnasdjkfndaskjnksajfasjkdfnjksanfkjsndfkjsandkfjnasdkjfnasdjkfndaskjnksajf
                             asjkdfnjksanfkjsndfkjsandkfjnasdkjfnasdjkfndaskjnksajfasjkdfnjksanfkjsndfkjsandkfjnasdkjfnasdjkfndaskjnksajf
+                            asjkdfnjksanfkjsndfkjsandkfjnasdkjfnasdjkfndaskjnksajfasjkdfnjksanfkjsndfkjsandkfjnasdkjfnasdjkfndaskjnksajf
+                            asjkdfnjksanfkjsndfkjsandkfjnasdkjfnasdjkfndaskjnksajfasjkdfnjksanfkjsndfkjsandkfjnasdkjfnasdjkfndaskjnksajf
+
+
                         </div>
                         <div style={{"fontWeight":"bold","marginTop":"10px"}}>Product Specification</div>
                         <div className="ProdSpecification">
@@ -58,12 +62,16 @@ function ViewProductPage() {
                             asjkdfnjksanfkjsndfkjsandkfjnasdkjfnasdjkfndaskjnksajfasjkdfnjksanfkjsndfkjsandkfjnasdkjfnasdjkfndaskjnksajf
                             asjkdfnjksanfkjsndfkjsandkfjnasdkjfnasdjkfndaskjnksajfasjkdfnjksanfkjsndfkjsandkfjnasdkjfnasdjkfndaskjnksajf
                             asjkdfnjksanfkjsndfkjsandkfjnasdkjfnasdjkfndaskjnksajfasjkdfnjksanfkjsndfkjsandkfjnasdkjfnasdjkfndaskjnksajf
+                            asjkdfnjksanfkjsndfkjsandkfjnasdkjfnasdjkfndaskjnksajfasjkdfnjksanfkjsndfkjsandkfjnasdkjfnasdjkfndaskjnksajf
+                            asjkdfnjksanfkjsndfkjsandkfjnasdkjfnasdjkfndaskjnksajfasjkdfnjksanfkjsndfkjsandkfjnasdkjfnasdjkfndaskjnksajf
+                            asjkdfnjksanfkjsndfkjsandkfjnasdkjfnasdjkfndaskjnksajfasjkdfnjksanfkjsndfkjsandkfjnasdkjfnasdjkfndaskjnksajf
+                            asjkdfnjksanfkjsndfkjsandkfjnasdkjfnasdjkfndaskjnksajfasjkdfnjksanfkjsndfkjsandkfjnasdkjfnasdjkfndaskjnksajf
+
                         </div>
                         <div style={{"fontWeight":"bold","marginTop":"10px"}}>Available Schedule</div>
                         <div className="AveSched">
                             asjkdfnjksanfkjsndfkjsandkfjnasdkjfnasdjkfndaskjnksajfasjkdfnjksanfkjsndfkjsandkfjnasdkjfnasdjkfndaskjnksajf
-                            asjkdfnjksanfkjsndfkjsandkfjnasdkjfnasdjkfndaskjnksajfasjkdfnjksanfkjsndfkjsandkfjnasdkjfnasdjkfndaskjnksajf
-                            asjkdfnjksanfkjsndfkjsandkfjnasdkjfnasdjkfndaskjnksajfasjkdfnjksanfkjsndfkjsandkfjnasdkjfnasdjkfndaskjnksajf
+
                         </div>
                         <div style={{"fontWeight":"bold","marginTop":"10px"}}>Location</div>
                         <div className="LocProd">

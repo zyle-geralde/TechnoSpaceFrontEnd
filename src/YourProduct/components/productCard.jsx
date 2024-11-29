@@ -8,18 +8,11 @@ function ProductCard(props) {
                 <div style={{"height":"215px","overflow":"hidden"}}>
                     <img src={props.imgsrc} className='prodCardImage'></img>
                 </div>
-                <div style={{"marginTop":"10px","marginRight":"10px","marginLeft":"10px"}}>
-                    <div className='prodCardName'>
+                <div className='p-2 overflow-hidden'>
+                    <div className='font-bold'>
                         {props.prodName}
                     </div>
-                    <div style={{"display":"flex","flexDirection":"row"}}>
-                        <div>
-                            P
-                        </div>
-                        <div>
-                            {props.prodPrice}
-                        </div>
-                    </div>
+                    <p>P{props.prodPrice}</p>
                 </div>
             </div>
         </>

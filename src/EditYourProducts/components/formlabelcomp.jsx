@@ -6,29 +6,28 @@ function FormLabelComp(props) {
     function chooseFormType() {
         if (props.typeform == "formT") {
             return (
-                <input type="text" className="formInputStyle"></input>
+                <input type="text" className="formInputStyle w-full" ></input>
             )
         }
         else if (props.typeform == "formnumT") {
             return (
-                <input type="number" className="formInputStyle" min={0}></input>
+                <input type="number" className="formInputStyle w-full" min={0}></input>
             )
         }
         else {
             return (
-                <textarea className='formTextAreastyle'></textarea>
+                <textarea className='formTextAreastyle' ></textarea>
             )
         }
     }
 
     return (
-        <div className = "formContMarg">
-            <div className='formNamestyle'>
+        <div className="w-full">
+            <div className='text-sm'>
                 {props.formName}
             </div>
             <div>
                 {chooseFormType()}
-                
             </div>
         </div>
 

@@ -6,30 +6,30 @@ function FormFillComp(props) {
     function checkFromEdit() {
         if (props.fromEdit === "Yes") {
             return (
-                <>
+                <div className='flex flex-row w-full gap-2'>
                     <EditFormButton classIndic={"cancelBut"} ButtonName={"Delete"} />
-                    <EditFormButton classIndic={"doneBut"} ButtonName={"Done"} />
-                </>
+                    <EditFormButton classIndic={"doneBut"} ButtonName={"Save"} />
+                </ div>
             )
         }
         else {
             return (
-                <>
+                <div className='flex flex-row w-full gap-2'>
                     <EditFormButton classIndic={"cancelButsend"} ButtonName={"Cancel"} />
                     <EditFormButton classIndic={"doneButsend"} ButtonName={"Upload"} />
-                </>
+                </div>
             )
         }
     }
     return (
-        <div style={{ "marginLeft": "50px" }}>
+        <div className='w-1/2 flex flex-col gap-2'>
             <FormLabelComp formName="Title" typeform="formT" />
             <FormLabelComp formName="Project Description" typeform="textT" />
             <FormLabelComp formName="Project Specification" typeform="textT" />
             <FormLabelComp formName="Available Schedule" typeform="textT" />
             <FormLabelComp formName="Location" typeform="formT" />
             <FormLabelComp formName="Price" typeform="formnumT" />
-            <div style={{ "display": "flex", "flexDirection": "row", "marginTop": "20px" }}>
+            <div className='flex flex-row w-full'>
                 {checkFromEdit()}
             </div>
 

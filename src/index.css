@@ -56,9 +56,6 @@ body:not(.no-scroll-styles)::-webkit-scrollbar-thumb {
   @apply bg-primary-color;
 }
 
-
-
-
 #container::-webkit-scrollbar{
   width: 2px;
 }

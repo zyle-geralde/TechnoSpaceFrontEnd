@@ -1,9 +1,5 @@
 .EditLrContainer{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin-top: 60px;
-    margin-bottom: 30px;
+    @apply flex flex-row ;
 }
 .MainimageFit{
     height: 500px;
@@ -55,13 +51,7 @@
     margin-top: -60px;
 }
 .formInputStyle{
-    width: 400px;
-    font-size: 15px;
-    padding: 5px;
-    border-style: solid;
-    border-width: 1px;
-    border-radius: 2px;
-    border-color: rgb(186, 186, 186);
+    @apply w-full border border-gray-300 p-1;
 }
 .formNamestyle{
     font-weight: bold;
@@ -69,14 +59,7 @@
     font-size: 18px;
 }
 .formTextAreastyle{
-    width: 400px;
-    font-size: 15px;
-    padding: 5px;
-    height: 100px;
-    border-style: solid;
-    border-width: 1px;
-    border-radius: 2px;
-    border-color: rgb(186, 186, 186);
+    @apply w-full border border-gray-300;
 }
 .formContMarg{
     margin-bottom: 5px;

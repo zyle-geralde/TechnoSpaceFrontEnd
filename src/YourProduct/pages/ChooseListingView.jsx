@@ -29,23 +29,25 @@ function ListingView() {
         navigate("/SellListingView")
     }
     return (
-        <>
-            <div style={{ "overflowY": "hidden", "height": "100vh" }}>
-                <HeaderComp />
-                <div className="containListing">
-                    <div className="listingsContainer">
-                        <div className="ListingTitle">Choose Listing Type</div>
-                    </div>
-                    <div className="layerCont">
-                        <div className="firstlayer">
-                            {firstlayer.map((item, index) => (
-                                <ListingItems key={index} imgsrc={item} titleimg={firstlayername[index]} onclickFunc={funcList[index]} />
-                            ))}
-                        </div>
+        <div className="flex flex-col poppins borderbox">
+            <HeaderComp />
+            <div className="sm:px-10 md:px-20 lg:px-30 xl:px-40 flex flex-col">
+                <div className="p-2 flex flex-col items-center m-auto">
+                    <div className="rounded-sm text-center bg-primary-color w-full text-white text-lg p-2 mx-auto m-2 md:w-2/3 lg:w-1/2 ">Choose Listing Type</div>
+                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 m-2">
+                        {firstlayer.map((item, index) => (
+                            <div key={index} className="flex justify-center items-center">
+                            <ListingItems
+                                    imgsrc={item}
+                                    titleimg={firstlayername[index]}
+                                    onclickFunc={funcList[index]}
+                                />
+                            </div>
+                        ))}
                     </div>
                 </div>
             </div>
-        </>
+        </div>
     )
 }
 

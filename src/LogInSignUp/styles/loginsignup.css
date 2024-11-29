@@ -42,6 +42,7 @@
     font-weight: bold;
     font-size: 30px;
     margin-top: 30px;
+    margin-bottom: 40px;
 }
 .emailInp{
     border-style: solid;
@@ -51,9 +52,83 @@
 .forInpCont{
     width: 350px;
 }
+.clickButton{
+    background-color: #800000;
+    color: white;
+    width: 350px;
+    border-radius: 5px;
+    text-align: center;
+    padding: 15px 0px;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.changeLoc{
+    color:rgb(32, 32, 32);
+}
+.changeLocurl{
+    color: #800000;
+    font-weight: bold;
+}
 
 @media (max-height:668px){
     .LogInMainCont{
         align-items: start;
+    }
+}
+@media(max-width: 1070px) and (min-width:560px){
+    .imageCont{
+        width: 0%;
+        display: none;
+    }
+    .logInCont{
+        padding: 20px;
+        min-width: 495px;
+        max-width: 495px;
+        width: 495px;
+        border-radius: 10px;
+        margin:30px;
+        min-height: 450px;
+        height: 450px;
+        max-height: 450px;
+    }
+    .logInformCont{
+        width: 100%;
+    } 
+}
+@media (max-width:560px){
+    .logInCont{
+        padding: 20px;
+        min-width: 295px;
+        max-width: 295px;
+        width: 295px;
+        border-radius: 10px;
+        margin:30px;
+        min-height: 450px;
+        height: 450px;
+        max-height: 450px;
+    }
+    .logInformCont{
+        width: 100%;
+    }
+    .imageCont{
+        width: 0%;
+        display: none;
+    }
+    .forInpCont{
+        width: 200px;
+    }
+    .clickButton{
+        width: 200px;
+        text-align: center;
+        padding: 15px 0px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+    .changeLoc{
+        font-size: 12px;
+    }
+    .changeLocurl{
+        font-size: 12px;
     }
 }

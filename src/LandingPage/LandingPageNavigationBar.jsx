@@ -5,7 +5,8 @@ function LandingPageNavigationBar() {
             <ul className="flex gap-4 self-center w-full justify-center sm:w-fit">
                 <li><a className="nav-text-hover" href="#introduction">Home</a></li>
                 <li><a className="nav-text-hover" href="#about-us">About Us</a></li>
-                <li><a className="nav-text-hover" href="#contact-us">Contact Us</a></li>
+                <li><a className="nav-text-hover" href="#Discover">Discover</a></li>
+                {/* <li><a className="nav-text-hover" href="#contact-us">Contact Us</a></li> */}
             </ul>
             <div className="ml-auto gap-4 hidden sm:flex">
                 <button className="border-2 px-3 text-xs hover:bg-slate-200">Join</button>

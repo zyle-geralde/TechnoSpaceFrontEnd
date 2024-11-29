@@ -24,8 +24,10 @@
 }
 
 .section {
-  @apply flex-col justify-start sm:px-2 h-fit md:flex md:gap-5 md:h-screen md:px-20 lg:px-32 xl:px-40 ; 
-  scroll-snap-align: start; /* Snap sections to the start */
+  @apply flex-col justify-start sm:px-2 h-fit sm:flex md:gap-5 md:h-fit  md:px-20 lg:h-screen  lg:px-32  xl:px-40; 
+  animation: autoShowAnimation;
+  /* scroll-snap-align: start; */
+  animation-timeline: view(90% 30%);
 }
 #container > div > *{
   @apply my-auto;
@@ -47,4 +49,15 @@ body{
 * {
   transition: 0.4s;
   scroll-behavior: smooth;
+}
+
+/* hide show animation */
+@keyframes autoShowAnimation {
+  from {
+    opacity: 0;
+    transform: scale(0);
+  }to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }

@@ -29,40 +29,38 @@ function EditFormButton(props) {
       }
     };
   
-
-    
-
-    
     function chooseButton() {
         if (props.ButtonName === "Delete") {
-            return(<div className={props.classIndic} data-toggle="modal" data-target="#exampleModal" onClick={handleShowModal}>
+            return(<div className='bg-red-500 text-center text-white w-full rounded-sm p-2' data-toggle="modal" data-target="#exampleModal" onClick={handleShowModal}>
                 {props.ButtonName}
             </div>)
         }
         else if (props.ButtonName === "Cancel") {
-            return(<div className={props.classIndic}>
+            return(<div className='bg-red-500 text-center text-white w-full rounded-sm p-2'>
               {props.ButtonName}
             </div>)
         }
         else if (props.ButtonName === "Upload") {
-            return(<div className={props.classIndic} data-toggle="modal" data-target="#sellModal" onClick={handleShowModalsell}>
+            return(<div className='bg-green-800 text-center text-white w-full rounded-sm p-2' data-toggle="modal" data-target="#sellModal" onClick={handleShowModalsell}>
               {props.ButtonName}
             </div>)
         }
         else if (props.ButtonName === "Done") {
-            return(<div className={props.classIndic}>
+            return(<div className="bg-green-800 text-center text-white w-full rounded-sm p-2">
               {props.ButtonName}
             </div>)
         }
         else {
-            return(<div className={props.classIndic}>
+            return(<div className="bg-green-800 text-center text-white w-full rounded-sm p-2">
                 {props.ButtonName}
             </div>)
         }
     }
     return (
         <>
-            {chooseButton()}
+        <div className='w-full'>
+          {chooseButton()}
+        </div>
             
             <div
         ref={modelSell}
@@ -116,19 +114,18 @@ function EditFormButton(props) {
                 Delete
               </h5>
             </div>
-            <div className="modal-body" style={{"display":"flex","flexDirection":"row","justifyContent":"center"}}>Are you sure you want to delete?</div>
-            <div className="modal-footer" style={{"display":"flex","flexDirection":"row","justifyContent":"center"}}>
+            <div className="modal-body">Are you sure you want to delete?</div>
+            <div className="p-3 w-full flex gap-2">
               <button
                 type="button"
-                className="btn btn-secondary"
+                className="btn btn-secondary w-1/2  text-sm"
                 data-dismiss="modal"
                 aria-label="Close" onClick={handleCloseModal}
-                style={{"backgroundColor":"white","borderStyle":"solid","borderWidth":"1px","borderColor":"black","color":"black"}}             
               >
                 Cancel
               </button>
-              <button type="button" className="btn" style={{"backgroundColor":"#800000c4","color":"white"}}>
-                Confirm
+              <button type="button" className="btn btn-success w-1/2 text-sm">
+                Yes
               </button>
             </div>
           </div>

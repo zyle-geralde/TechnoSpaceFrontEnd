@@ -6,19 +6,19 @@ function HeaderComp() {
         navigate("/YourCustomerPurchase")
     }
     return (
-        <>
-            <div className="headerBar">
-                <div>
-                    <a href="/Yourproducts" className="Productslink">Products</a>
-                    <a href="/Yourproducts" className="YourProductslink">Your Products</a>
-                    <a href="/Yourproducts" className="Purchaselink">Purchase History</a>
+        <div className="sticky top-0 z-50 backdrop-blur-sm border-3 border-b-primary-color p-2">
+            <div className="text-xs flex flex-row self-center sm:px-10 md:px-20 lg:px-30 xl:px-40">
+                <div className=" flex flex-row gap-3 my-auto">
+                    <a href="/Yourproducts" className="hover:text-primary-color" >Products</a>
+                    <a href="/Yourproducts" className="hover:text-primary-color">Your Products</a>
+                    <a href="/Yourproducts" className="hover:text-primary-color">Purchase History</a>
                 </div>
-                <div className="navImageList">
-                    <img src="/images/icon.png" className="ProductPurchaseIcon" onClick={yourCustomerChange}></img>
-                    <img src="/images/User.png" className="UserIcon"></img>
+                <div className="flex flex-row self-end ml-auto gap-3">
+                    <img src="/images/icon.png"  onClick={yourCustomerChange} className="h-3 my-auto"></img>
+                    <img src="/images/User.png" className="h-6 my-auto"></img>
                 </div>
             </div>
-        </>
+        </div>
     )
 }
 

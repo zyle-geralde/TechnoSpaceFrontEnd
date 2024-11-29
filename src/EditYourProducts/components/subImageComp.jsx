@@ -7,14 +7,12 @@ function SubImageComp() {
     var [showImage,setshowImage] = useState(["./images/defaultImage.png","./images/defaultImage.png","./images/defaultImage.png","./images/defaultImage.png"])
     
     return (
-        <div style={{ "display": "flex", "flexDirection":"column","alignItems":"center"}}>
-            <div className='subImageCont'>
-                {
-                    showImage.map((item, index) => (
-                        <SubImageFitComp defaultImgProp={item} key={ index} />
-                    ))
-                }
-            </div>
+        <div className='flex flex-row justify-center gap-2'>
+            {
+                showImage.map((item, index) => (
+                    <SubImageFitComp defaultImgProp={item} key={ index} />
+                ))
+            }
         </div>
     )
 }

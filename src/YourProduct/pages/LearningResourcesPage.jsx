@@ -11,22 +11,13 @@ function LearningResourcesPage() {
         navigate("/EditLearningResources")
     }
     return (
-        <div style={{
-            "maxHeight": "100vh", "minHeight": "100vh", "height": "100vh", "display": "flex", "flexDirection": "column",
-            "overflowY":"hidden"
-        }}>
-            <div>
-                <HeaderComp />
-            </div>
-            <div>
+        <div className="poppins pb-4">
+            <HeaderComp />
+            <div className="sm:px-10 md:px-20 lg:px-30 xl:px-40">    
                 <SearchSection />
-            </div>
-            <div>
                 <ProductTitle titleText={"Learning Resources"} />
             </div>
-            <div className="scrollable-container">
-                <ListProducts onFuncme={gotoEditLR} />
-            </div>
+            <ListProducts onFuncme={gotoEditLR} />
         </div>
     )
 }

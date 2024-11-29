@@ -37,7 +37,6 @@
     height: 30px;
 }
 .searchInput{
-    padding: 10px 10px;
     padding-right: 40px;
     font-size: 15px;
     width: 600px;
@@ -57,12 +56,7 @@
     padding-bottom: 20px;
 }
 .titleTextstyle{
-    font-size: 30px;
-    font-weight: bold;
-    color: #800000;
-    margin-left: 5%;
-    margin-bottom: 10px;
-    margin-top: 0px;
+    @apply text-primary-color text-xl font-medium px-2 pb-2;
 }
 .pGridView{
     display:flex;
@@ -71,23 +65,7 @@
 
 }
 .cardProd{
-    height: 300px;
-    width: 250px;
-    cursor: pointer;
-    background-color: #F3F3F3;
-    border-radius: 5px;
-    box-shadow: 0 0 5px rgba(107, 107, 107, 0.3);
-    padding: 7px;
-    transition: 0.2s;
-}
-.cardProd:hover{
-    height: 300px;
-    width: 250px;
-    cursor: pointer;
-    background-color: rgba(107, 107, 107, 0.23);
-    border-radius: 10px;
-    box-shadow: 0 0 5px rgba(107, 107, 107, 0.3);
-    padding: 7px;
+    @apply flex flex-col border-2 hover:shadow-md hover:scale-105 hover:border-primary-color;
 }
 .prodCardImage{
     object-fit: cover;

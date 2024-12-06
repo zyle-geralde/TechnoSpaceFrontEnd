@@ -30,28 +30,27 @@ function LogInPage() {
         
     }
 
+    function setUserEmail(newval) {
+        setEmail_ID(newval)
+        console.log(email_id)
+    }
+    function setUserPassword(newval) {
+        setPassword(newval)
+        console.log(password)
+    }
+
     return <>
         <div className="LogInMainCont">
             <div className="logInCont">
-                <div className="logInformCont flex flex-col gap-4">
-                    <TitleLogComp title = "LogIn" />
-                    <div className="flex flex-col gap-2 w-full">
-                        <div>
-                            <label htmlFor="">Email or ID Number</label>
-                            <input type = "email" className="border-2 border-gray-300 w-full p-1" 
-                            onChange={(e)=>setEmail_ID(e.target.value)}/>
-                        </div>
-                        <div>
-                            <label htmlFor="">Password</label>
-                            <input type = "password" className="border-2 border-gray-300 w-full p-1" 
-                            onChange={(e)=>setPassword(e.target.value)}/>
-                        </div>
-                    </div>
-                    <button className="w-full text-white p-1 text-center bg-primary" onClick={handleLogin}>Login</button>
-                    <ChangeLocComp message ="Don't have an account?" changelink = "/SignUp" indic = "Sign up" />
+                <div className="logInformCont">
+                    <TitleLogComp title="LogIn" />
+                    <InputLogComp type="email" classinp="emailInp" labelInp="Email address" onChangeF={setUserEmail} />
+                    <InputLogComp type="password" classinp="passwordInp" labelInp="Password" onChangeF={setUserPassword}/>
+                    <ButtonClickComp classBut="clickButton" titleBut="LogIn" onFunc={handleLogin} />
+                    <ChangeLocComp message="Don't have an account?" changelink="/SignUp" indic="Sing up" />
                 </div>
-                <div className="imageCont">
-                    <img src="./images/Left.png" className="imageSelf"></img>
+                <div className="imageContSign">
+                    <img src="./images/SignLeft.png" className="imageSelfSign"></img>
                 </div>
             </div>
         </div>

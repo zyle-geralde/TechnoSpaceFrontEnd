@@ -33,7 +33,7 @@ function ListingView() {
             <HeaderComp />
             <div className="sm:px-10 md:px-20 lg:px-30 xl:px-40 flex flex-col">
                 <div className="p-2 flex flex-col items-center m-auto">
-                    <div className="rounded-sm text-center bg-primary-color w-full text-white text-lg p-2 mx-auto m-2 md:w-2/3 lg:w-1/2 ">Choose Listing Type</div>
+                    <div className="rounded-sm text-center bg-primary-color w-full text-white text-lg p-2 mx-auto md:w-2/3 lg:w-1/2 ">Choose Listing Type</div>
                     <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 m-2">
                         {firstlayer.map((item, index) => (
                             <div key={index} className="flex justify-center items-center">

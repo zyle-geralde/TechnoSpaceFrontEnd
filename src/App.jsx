@@ -20,6 +20,7 @@ import SignUpPage from './LogInSignUp/pages/SignUpPage.jsx';
 import { useLocation } from 'react-router-dom';
 import BrowsePage from './BrowseProduct/pages/BrowsePage.jsx';
 import ViewProductPage from './ViewProduct/pages/viewProductPage.jsx';
+import ViewMessagePage from './Message/pages/ViewMessagePage';
 
 function App() {
     const location = useLocation();
@@ -50,6 +51,7 @@ function App() {
             <Route path="/BrowseProduct" element={<BrowsePage />} />
             <Route path="/YourCustomerPurchase" element={<YourCustomerPage />} /> 
             <Route path="/ViewProduct" element={<ViewProductPage />} /> 
+            <Route path="/View-message" element={<ViewMessagePage />} />
             <Route path="*" element={<NotfundFunc />} />
             <Route path="/" element={<LandingPage />} />
         </Routes>

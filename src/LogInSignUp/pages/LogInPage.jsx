@@ -24,6 +24,8 @@ function LogInPage() {
             //replace with azure api
             const response = await axios.post('https://localhost:7016/api/Login',payload);
             setMessage('login success');
+            localStorage.setItem('email', payload.EmailOrIDNumber);
+            console.log(payload)
             navLink("/BrowseProduct")
             
         } catch (error) {

@@ -3,20 +3,24 @@ import '../styles/editlisting.css'
 function FormLabelComp(props) {
     var formshow;
 
+    const handleChange = (event) => {
+        props.onfunc(event.target.value);
+    };
+
     function chooseFormType() {
         if (props.typeform == "formT") {
             return (
-                <input type="text" className="formInputStyle w-full" ></input>
+                <input type="text" className="formInputStyle w-full formText" onChange={handleChange}></input>
             )
         }
         else if (props.typeform == "formnumT") {
             return (
-                <input type="number" className="formInputStyle w-full" min={0}></input>
+                <input type="number" className="formInputStyle w-full formText" min={0} onChange={handleChange}></input>
             )
         }
         else {
             return (
-                <textarea className='formTextAreastyle' ></textarea>
+                <textarea className='formTextAreastyle formText' onChange={handleChange}></textarea>
             )
         }
     }

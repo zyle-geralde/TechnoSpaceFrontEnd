@@ -89,7 +89,7 @@ function EditFormButton(props) {
               >
                 Cancel
               </button>
-              <button type="button" className="btn" style={{"backgroundColor":"#800000c4","color":"white"}}>
+              <button type="button" className="btn" style={{"backgroundColor":"#800000c4","color":"white"}} onClick={props.onclickme}>
                 Confirm
               </button>
             </div>

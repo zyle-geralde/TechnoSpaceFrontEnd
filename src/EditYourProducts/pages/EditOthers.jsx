@@ -19,9 +19,6 @@ function EditOthers() {
                     <BackComp onFunc={navtoBack} />
                 </div>
                 <div className="EditLrContainer gap-2 flex flex-col xs:flex-row">
-                    <div className="w-full md:w-1/2 self-center">
-                        <ImageHolders />
-                    </div>
                     <FormFillComp fromEdit = "Yes" />
                 </div>
             </div>

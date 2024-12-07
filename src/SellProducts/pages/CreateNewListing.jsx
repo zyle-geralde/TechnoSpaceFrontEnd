@@ -15,16 +15,16 @@ function SellListingView() {
     const navigate = useNavigate()
 
     function navigateToLearningResources() {
-        navigate("/SellProductsInListing")
+        navigate("/SellProductsInListing", { state: { category: "LR" } })
     }
     function navigateToSchoolSupplies() {
-        navigate("/SellProductsInListing")
+        navigate("/SellProductsInListing", { state: { category: "SS" } })
     }
     function navigateToGadgets() {
-        navigate("/SellProductsInListing")
+        navigate("/SellProductsInListing", { state: { category: "G" } })
     }
     function navigateToOthers() {
-        navigate("/SellProductsInListing")
+        navigate("/SellProductsInListing", { state: { category: "O" } })
     }
     function navigateToBack() {
         navigate("/Yourproducts")

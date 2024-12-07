@@ -16,7 +16,7 @@ function GadgetsPage() {
                 <SearchSection />
                 <ProductTitle titleText={"Gadgets"} />
             </div>
-            <ListProducts onFuncme={gotoEditLR}/>
+            <ListProducts onFuncme={gotoEditLR} categ = "G"/>
         </div>
     )
 }

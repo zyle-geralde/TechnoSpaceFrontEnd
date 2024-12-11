@@ -17,7 +17,7 @@ function OthersPage() {
                 <SearchSection />
                 <ProductTitle titleText={"Others"} />
             </div>
-            <ListProducts onFuncme={gotoEditLR}/>
+            <ListProducts onFuncme={gotoEditLR} categ = "O"/>
         </div>
     )
 }

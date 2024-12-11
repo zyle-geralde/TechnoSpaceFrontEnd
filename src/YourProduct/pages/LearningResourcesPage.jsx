@@ -17,7 +17,7 @@ function LearningResourcesPage() {
                 <SearchSection />
                 <ProductTitle titleText={"Learning Resources"} />
             </div>
-            <ListProducts onFuncme={gotoEditLR} />
+            <ListProducts onFuncme={gotoEditLR} categ = "LR"/>
         </div>
     )
 }

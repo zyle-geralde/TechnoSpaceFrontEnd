@@ -18,7 +18,7 @@ function SchoolSupplyPage() {
                 <SearchSection />
                 <ProductTitle titleText={"School Supplies"} />
             </div>
-            <ListProducts onFuncme={gotoEditLR}/>
+            <ListProducts onFuncme={gotoEditLR} categ = "SS"/>
         </div>
     )
 }

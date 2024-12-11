@@ -45,7 +45,7 @@ function BrowsePage() {
                     <button className="btn btn-danger dropdown-toggle " type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
                         {droptitle}
                     </button>
-                    <div className="dropdown-menu" aria-labelledby="dropdownMenu2">
+                    <div className="dropdown-menu text-sm" aria-labelledby="dropdownMenu2">
                         <button className="dropdown-item" type="button" onClick={changeAll}>All</button>
                         <button className="dropdown-item" type="button" onClick={changeLR}>Learning Resources</button>
                         <button className="dropdown-item" type="button"  onClick={changeSS}>School Supplies</button>

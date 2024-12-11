@@ -9,6 +9,7 @@ import { useNavigate } from 'react-router-dom'
 
 import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import storage from "../../../firebaseconf.js";
+
 function FormFillComp(props) {
     const navigate = useNavigate();
     const [mainImage, setMainImage] = useState("")

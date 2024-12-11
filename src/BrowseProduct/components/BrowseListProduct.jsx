@@ -12,7 +12,7 @@ function BrowseListProducts(props) {
     return (
         <>
             <div className="pGridView">
-                <div className="productGrid">
+                <div className="productGrid p-2">
                     {
                         loadedProductImage.map((item, index) => (
                             <ProductCard imgsrc={item} prodName={loadedProductName[index]} prodPrice={loadedProductPrice[index]} key={index} onFunc={props.onFuncme} />

@@ -13,6 +13,7 @@ function SignUpPage() {
     const [firstname, setFirstname] = useState('');
     const [lastname, setLastname] = useState('');
     const [message, setMessage] = useState('');
+    const [student_id, setID] = useState('')
     const navigate = useNavigate();
 
     const handleSignUp = async (e) => {
@@ -21,7 +22,7 @@ function SignUpPage() {
             "Email": email_id,
             "FirstName": firstname,
             "LastName": lastname,
-            "IDNumber": email_id,
+            "IDNumber": student_id,
             "Password": password,
         }
 
@@ -80,6 +81,7 @@ function SignUpPage() {
                     <InputLogComp type="text" classinp="passwordInp" labelInp="LastName" onChangeF={lastnameSet}/>
                     <InputLogComp type="email" classinp="emailInp" labelInp="Email address" onChangeF={emailSet}/>
                     <InputLogComp type="password" classinp="passwordInp" labelInp="Password" onChangeF={passwordSet} />
+                    <InputLogComp type="number" classinp="emailInp" labelInp="Student ID" onChangeF={setID} />
                     <ButtonClickComp classBut="clickButton" titleBut="SignUp" onFunc={handleSignUp}/>
                     <ChangeLocComp message="Already have an account?" changelink="/LogIn" indic="Log In" />
                 </div>

@@ -7,8 +7,8 @@ import { useNavigate } from "react-router-dom";
 function OthersPage() {
     const navigate = useNavigate();
 
-    function gotoEditLR() {
-        navigate("/EditOthers")
+    function gotoEditLR(allrep) {
+        navigate("/EditOthers",{ state: { category: "G",resdata: allrep} })
     }
     return (
         <div className="pb-4 ">

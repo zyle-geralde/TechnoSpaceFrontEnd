@@ -10,6 +10,9 @@ function ListProducts(props) {
     var [loadedProductImage, setloadedProductImage] = useState([])
     var [loadedProductName, setloadedProductName] = useState([])
     var [loadedProductPrice, setloadedProductPrice] = useState([])
+
+
+    var[allresponse,setAllResponse] = useState([])
     
 
     useEffect(() => {
@@ -23,6 +26,7 @@ function ListProducts(props) {
                 var holdimage = []
                 var holdname = []
                 var holdprice = []
+                setAllResponse(response.data)
                 for (var elem of response.data) {
                     holdimage.push(elem.mainImage)
                     holdname.push(elem.name)
@@ -44,11 +48,12 @@ function ListProducts(props) {
             <div className="sm:px-10 md:px-20 lg:px-30 xl:px-40">
                 <div className="grid grid-cols-2 gap-2 md:grid-cols-3 lg:gap-4 lg:grid-cols-4 px-2">
                     {
-                        loadedProductImage.map((item, index) => (
-                            <ProductCard imgsrc={item} 
-                            prodName={loadedProductName[index]} 
-                            prodPrice={loadedProductPrice[index]} 
-                            key={index} 
+                        allresponse.map((item, index) => (
+                            <ProductCard imgsrc={item.mainImage} 
+                            prodName={item.name} 
+                            prodPrice={item.price} 
+                            key={index}
+                            origdata={item} 
                             onFunc={props.onFuncme} />
                         ))
                     }

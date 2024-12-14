@@ -6,7 +6,6 @@ import ImageHolders from './imageholders'
 import { useLocation } from 'react-router-dom'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
-
 import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import storage from "../../../firebaseconf.js";
 

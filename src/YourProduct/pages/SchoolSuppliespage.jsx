@@ -8,8 +8,8 @@ import { useNavigate } from "react-router-dom";
 function SchoolSupplyPage() {
     const navigate = useNavigate();
 
-    function gotoEditLR() {
-        navigate("/EditSchoolSupplies")
+    function gotoEditLR(allrep) {
+        navigate("/EditSchoolSupplies",{ state: { category: "G",resdata: allrep} })
     }
     return (
         <div className="pb-4 ">

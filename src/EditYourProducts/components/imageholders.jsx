@@ -1,8 +1,12 @@
 import MainImageComp from "./mainimageComp";
 import SubImageComp from "./subImageComp";
 import { useState } from "react";
+import { useLocation } from "react-router-dom";
+import { useEffect } from "react";
 
 function ImageHolders(props) {
+    const location = useLocation();
+    const allrep = location.state.resdata
     var [defaultImg, setdefaultImg] = useState("./images/defaultImage.png")
     const [selectedFile, setSelectedFile] = useState(null);
     const handleImageChange = (event) => {
@@ -12,6 +16,10 @@ function ImageHolders(props) {
             props.onSave(file,URL.createObjectURL(file))
         }
     };
+
+    if (allrep) {
+        setdefaultImg(allrep.mainImage)
+    }
 
     const handleDivClick = () => {
         document.getElementById("fileInput").click();

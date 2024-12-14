@@ -4,7 +4,9 @@ import { useNavigate } from "react-router-dom";
 function ProductCard(props) {
     return (
         <>
-            <div className="cardProd" onClick={props.onFunc}>
+            <div className="cardProd" onClick={function (e) {
+                props.onFunc(props.origdata)
+            }}>
                 <div style={{"height":"215px","overflow":"hidden"}}>
                     <img src={props.imgsrc} className='prodCardImage'></img>
                 </div>

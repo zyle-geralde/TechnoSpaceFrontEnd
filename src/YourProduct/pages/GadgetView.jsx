@@ -6,8 +6,8 @@ import ProductTitle from "../components/productTitle";
 import { useNavigate } from "react-router-dom";
 function GadgetsPage() {
     const navigate = useNavigate();
-    function gotoEditLR() {
-        navigate("/EditGadgets")
+    function gotoEditLR(allrep) {
+        navigate("/EditGadgets",{ state: { category: "G",resdata: allrep} })
     }
     return (
         <div className="pb-4 ">

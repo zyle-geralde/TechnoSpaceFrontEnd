@@ -1,10 +1,12 @@
 import '../styles/editlisting.css'
 import React, { useRef } from "react";
+import { useNavigate } from 'react-router-dom';
 
 
 function EditFormButton(props) {
   const modalRef = useRef(null);
   const modelSell = useRef(null);
+  const navigate = useNavigate();
 
     const handleShowModal = () => {
         if (modalRef.current) {
@@ -36,7 +38,9 @@ function EditFormButton(props) {
             </div>)
         }
         else if (props.ButtonName === "Cancel") {
-            return(<div className='bg-red-500 text-center text-white w-full rounded-sm p-2'>
+          return (<div className='bg-red-500 text-center text-white w-full rounded-sm p-2' onClick={function (e) {
+              navigate("/SellListingView")
+            }}>
               {props.ButtonName}
             </div>)
         }

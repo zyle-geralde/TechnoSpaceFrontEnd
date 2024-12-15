@@ -87,9 +87,62 @@ function EditListing() {
     const handleImageChange = (event) => {
         const file = event.target.files[0];
         if (file) {
-            mainImagefunc(file,URL.createObjectURL(file))
+            mainImagefunc(file, URL.createObjectURL(file))
         }
     };
+
+
+    const editProduct = async (id, updatedProductData) => {
+        try {
+            const response = await axios.put(`https://localhost:7016/api/Products/${id}`, updatedProductData, {
+                headers: {
+                    "Content-Type": "application/json",
+                },
+            });
+            return response.data;
+        } catch (error) {
+            console.error("Error editing product:", error);
+            throw error;
+        }
+    };
+
+    async function clickSave() {
+        console.log("clicked save")
+        let downloadURL = mainImage;
+        if (mainImage =="" || nameProd == "" || descriptionProd == "" || specializationProd == "" || scheduleProd == "" ||locationProd == "" || priceProd == "" || creatorProd == "") {
+            alert("Invalid credentails")
+            return
+        }
+        if (mainImageFile) {
+            const storageRef = ref(storage, `images/${Date.now()}_${mainImageFile.name}`);
+
+            await uploadBytes(storageRef, mainImageFile);
+      
+            downloadURL = await getDownloadURL(storageRef);
+        }
+        else {
+
+        }
+        var formData = {
+            name: nameProd,
+            description: descriptionProd,
+            specialization: specializationProd,
+            schedule: scheduleProd,
+            location: locationProd,
+            price: priceProd,
+            creator: creatorProd,
+            mainImage: downloadURL,
+            category: allrep.category
+        }
+        try {
+            const result = await editProduct(allrep.id, formData);
+            navtoLearningResources()
+            window.location.reload()
+        } catch (error) {
+            alert("Failed to update product. Check console for details.");
+        }
+    }
+
     return (
         <div className="h-screen">
             <HeaderComp />
@@ -120,8 +173,8 @@ function EditListing() {
                         <FormLabelOrg formName="Price" typeform="formnumT" onfunc={pricefunc} defaultword={priceProd} />
                         <div className='flex flex-row w-full'>
                             <div className='flex flex-row w-full gap-2'>
-                                <EditButtonOrg classIndic={"cancelBut"} ButtonName={"Delete"} />
-                                <EditButtonOrg classIndic={"doneBut"} ButtonName={"Save"} />
+                                <EditButtonOrg classIndic={"cancelBut"} ButtonName={"Delete"} clickedSave={clickSave} />
+                                <EditButtonOrg classIndic={"doneBut"} ButtonName={"Save"} clickedSave={clickSave} />
                             </ div>
                         </div>
 

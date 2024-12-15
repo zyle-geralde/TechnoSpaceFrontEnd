@@ -49,8 +49,8 @@ function EditButtonOrg(props) {
               {props.ButtonName}
             </div>)
         }
-        else if (props.ButtonName === "Done") {
-            return(<div className="bg-green-800 text-center text-white w-full rounded-sm p-2">
+        else if (props.ButtonName === "Save") {
+            return(<div className="bg-green-800 text-center text-white w-full rounded-sm p-2" onClick={props.clickedSave}>
               {props.ButtonName}
             </div>)
         }

@@ -3,7 +3,7 @@ import { useState } from "react";
 import "../ReportComponents/report.css"
 import axios from "axios";
 
-function ReportButton({ receiverId }){
+function ReportButton({ receiverEmailAddress }){
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [reportMessage, setReportMessage] = useState(null);
     const [responseMessage, setResponseMessage] = useState(null);
@@ -21,11 +21,14 @@ function ReportButton({ receiverId }){
             showResponseResult("This field cannot be left blank.")
             return;
         }
+        
+        const user = await axios.get(`https://localhost:7016/api/user?email=${receiverEmailAddress}`);
+        // console.log(user.data.id)
         const reportDTO = {
             Title: reportMessage,
             CreatedDate: new Date().toISOString(),
             senderID: localStorage.getItem('userId'),
-            receiverID: {receiverId},
+            receiverID: user.data.id,
         };
         try {
             axios.post('https://localhost:7016/api/report',reportDTO);

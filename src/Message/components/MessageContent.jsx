@@ -33,13 +33,13 @@ const MessageContent = ({ messages, userId }) => {
                 >
                     {message.senderId !== userId && (
                         <img
-                            src="https://via.placeholder.com/40"
+                            src="src/assets/default_profile.png"
                             alt="Sender"
-                            className="w-12 h-12 rounded-full"
+                            className="w-12 h-12 rounded-full border-2 border-gray"
                         />
                     )}
                     <div
-                        className={`w-max px-4 py-2 rounded-lg shadow-sm ${
+                        className={`max-w-[70%] break-words px-4 py-2 rounded-lg shadow-sm ${
                             message.senderId === userId
                                 ? "bg-green-100 text-right"
                                 : "bg-blue-100"

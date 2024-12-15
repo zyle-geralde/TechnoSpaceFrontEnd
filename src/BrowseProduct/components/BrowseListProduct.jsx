@@ -12,24 +12,30 @@ function BrowseListProducts(props) {
                 const response = await axios.get("https://localhost:7016/api/Products/category", {
                     params: { category: 'SS' },
                 });
-                console.log(response.data);
+                console.log('Fetched products:', response.data);
 
-                if (response.data && response.data.$values) {
-                    const filteredProducts = response.data.$values.map(product => ({
-                        id: product.id,
-                        name: product.name,
-                        description: product.description,
-                        specialization: product.specialization,
-                        schedule: product.schedule,
-                        location: product.location,
-                        price: product.price,
-                        creator: product.creator,
-                        mainImage: product.mainImage
-                    }));
-                    setProducts(filteredProducts);
+                // Handle different response formats
+                let productsData = [];
+                if (Array.isArray(response.data)) {
+                    productsData = response.data;
+                } else if (response.data.$values) {
+                    productsData = response.data.$values;
                 } else {
                     console.error("Unexpected response format:", response.data);
                 }
+
+                const filteredProducts = productsData.map(product => ({
+                    id: product.id,
+                    name: product.name,
+                    description: product.description,
+                    specialization: product.specialization,
+                    schedule: product.schedule,
+                    location: product.location,
+                    price: product.price,
+                    creator: product.creator,
+                    mainImage: product.mainImage
+                }));
+                setProducts(filteredProducts);
             } catch (err) {
                 console.error("Error fetching products:", err);
             }

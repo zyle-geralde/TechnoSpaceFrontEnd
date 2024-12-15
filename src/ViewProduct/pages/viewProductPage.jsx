@@ -43,34 +43,36 @@ function ViewProductPage() {
 
     async function handleMessageSeller() {
         try {
-            const currentUserId =  localStorage.getItem('userId'); // Fetch current user's ID
+            const currentUserId = localStorage.getItem('userId'); // Fetch current user's ID
             const creatorId = await getUserId(product.creator); // Fetch creator's ID
-
-            const conversation = {
-                id: "id",
-                user1Id: creatorId,
-                user2Id: currentUserId,
-                lastUpdated: new Date().toISOString()
+    
+            const conversationDTO = {
+                User1Email: creatorId,
+                User2Email: currentUserId,
+                ProductId: product.id
             };
-
-            console.log("Creating conversation with payload:", conversation);
-
-            const response = await axios.post('https://localhost:7016/api/Conversations', conversation);
+    
+            console.log("Creating conversation with payload:", conversationDTO);
+    
+            const response = await axios.post('https://localhost:7016/api/Conversations', conversationDTO);
             console.log("Conversation created:", response.data);
             alert("Conversation started with the seller!");
         } catch (error) {
-            if (error.response) {
-                if (error.response.data.errors) {
-                    console.error("Validation errors:", error.response.data.errors);
-                }
+            let errorMessage = "Failed to start conversation. Please try again later.";
+            if (error.response && error.response.data.errors) {
+                console.error("Validation errors:", error.response.data.errors);
+                errorMessage = "Please check the provided data.";
             } else if (error.request) {
                 console.error("Error request data:", error.request);
             } else {
                 console.error("Error message:", error.message);
             }
             console.error("Error config:", error.config);
+            alert(errorMessage); // Provide user-friendly feedback
         }
     }
+    
+    
 
     const { mainImage, name, price, description, specialization, schedule, location, creator } = product || {};
 

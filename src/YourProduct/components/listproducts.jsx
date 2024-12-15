@@ -1,54 +1,47 @@
-import ProductCard from "./productCard"
-import '../style/yourProductlist.css'
+import ProductCard from "./productCard";
+import '../style/yourProductlist.css';
 import { useNavigate } from "react-router-dom";
-import { useState } from "react";
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
 
-
 function ListProducts(props) {
-    var [loadedProductImage, setloadedProductImage] = useState([])
-    var [loadedProductName, setloadedProductName] = useState([])
-    var [loadedProductPrice, setloadedProductPrice] = useState([])
-
-
-    var[allresponse,setAllResponse] = useState([])
+    const [loadedProductImage, setloadedProductImage] = useState([]);
+    const [loadedProductName, setloadedProductName] = useState([]);
+    const [loadedProductPrice, setloadedProductPrice] = useState([]);
+    const [allresponse, setAllResponse] = useState([]);
     
-
     useEffect(() => {
         async function fetchProducts() {
             try {
                 const response = await axios.get("https://localhost:7016/api/Products/category", {
                     params: { category: props.categ },
                 });
-                console.log(response.data)
+                console.log(response.data);
 
-                var holdimage = []
-                var holdname = []
-                var holdprice = []
-                var allresp = []
-                for (var elem of response.data) {
-                    console.log(localStorage.getItem("email"))
-                    console.log(elem.creator)
-                    console.log(localStorage.getItem("email") != elem.creator)
-                    if (localStorage.getItem("email") == elem.creator) {
-                        allresp.push(elem)
+                if (response.data && response.data.$values) {
+                    const products = response.data.$values;
+
+                    const holdimage = [];
+                    const holdname = [];
+                    const holdprice = [];
+                    const allresp = [];
+                    
+                    for (const elem of products) {
+                        if (localStorage.getItem("email") === elem.creator) {
+                            allresp.push(elem);
+                            holdimage.push(elem.mainImage);
+                            holdname.push(elem.name);
+                            holdprice.push(elem.price);
+                        }
                     }
+                    
+                    setAllResponse(allresp);
+                    setloadedProductImage(holdimage);
+                    setloadedProductName(holdname);
+                    setloadedProductPrice(holdprice);
+                } else {
+                    console.error("Unexpected response format:", response.data);
                 }
-                setAllResponse(allresp)
-                for (var elem of response.data) {
-                    console.log(localStorage.getItem("email"))
-                    console.log(elem.creator)
-                    console.log(localStorage.getItem("email") != elem.creator)
-                    if (localStorage.getItem("email") == elem.creator) {
-                        holdimage.push(elem.mainImage)
-                        holdname.push(elem.name)
-                        holdprice.push(elem.price)
-                    }
-                }
-                setloadedProductImage(holdimage)
-                setloadedProductName(holdname)
-                setloadedProductPrice(holdprice)
             } catch (err) {
                 console.error("Error fetching products:", err);
             }
@@ -61,20 +54,20 @@ function ListProducts(props) {
         <>
             <div className="sm:px-10 md:px-20 lg:px-30 xl:px-40">
                 <div className="grid grid-cols-2 gap-2 md:grid-cols-3 lg:gap-4 lg:grid-cols-4 px-2">
-                    {
-                        allresponse.map((item, index) => (
-                            <ProductCard imgsrc={item.mainImage} 
-                            prodName={item.name} 
-                            prodPrice={item.price} 
+                    {allresponse.map((item, index) => (
+                        <ProductCard 
+                            imgsrc={item.mainImage}
+                            prodName={item.name}
+                            prodPrice={item.price}
                             key={index}
-                            origdata={item} 
-                            onFunc={props.onFuncme} />
-                        ))
-                    }
+                            origdata={item}
+                            onFunc={props.onFuncme} 
+                        />
+                    ))}
                 </div>
             </div>
         </>
-    )
+    );
 }
 
-export default ListProducts
+export default ListProducts;

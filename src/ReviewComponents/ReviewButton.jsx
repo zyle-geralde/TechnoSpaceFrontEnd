@@ -3,7 +3,7 @@ import { useState } from "react";
 import "../ReviewComponents/review.css"
 import axios from "axios";
 
-function ReviewButton({ receiverId }){
+function ReviewButton({ receiverEmailAdress }){
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [reviewMessage, setReviewMessage] = useState(null);
     const [responseMessage, setResponseMessage] = useState(null);
@@ -16,15 +16,15 @@ function ReviewButton({ receiverId }){
             setResponseMessage(null);
         }, 2200);
     }
-
     const submitReview = async () => {
         if(!reportMessage) {
             showResponseResult("This field cannot be left blank.")
             return;
         }
+        const user = await axios.get(`https://localhost:7016/api/user?email=${receiverEmailAddress}`);
         const reviewDTO = {
             Description: reviewMessage,
-            ReceiverId: {receiverId},
+            ReceiverId: user.data.id,
             SenderId: localStorage.getItem("userId"),
             ModifiedDate: new Date().toISOString()
         }

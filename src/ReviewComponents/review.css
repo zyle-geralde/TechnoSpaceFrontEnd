@@ -1,0 +1,15 @@
+.aniamtion-modal{
+    animation: appear 0.1s linear;
+}
+.hide-scroll{
+    scrollbar-width: thin;
+    scrollbar-color: #800000 transparent;
+}
+@keyframes appear{
+    from {
+        scale: 0.1;
+    }
+    to{
+        scale: 1;
+    }
+}

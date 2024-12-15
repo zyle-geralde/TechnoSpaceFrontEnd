@@ -62,7 +62,7 @@ function ViewProductPage() {
                         <div className="messageBut">
                             Message Seller
                         </div>
-                        <ReportButton />
+                        <ReportButton receiverEmailAddress={"sss@nnn.com"} />
                     </div>
                     <div className="containInfo">
                         <div style={{"fontWeight":"bold","marginTop":"10px"}}>Product Description</div>

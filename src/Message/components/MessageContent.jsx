@@ -1,6 +1,16 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 
 const MessageContent = ({ messages, userId }) => {
+    const messageEndRef = useRef(null);
+
+    const scrollToBottom = () => {
+        messageEndRef.current?.scrollIntoView({ behavior: "smooth" });
+    };
+
+    useEffect(() => {
+        scrollToBottom();
+    }, [messages]);
+
     if (!messages) {
         return <div>Loading messages...</div>;
     }
@@ -9,9 +19,12 @@ const MessageContent = ({ messages, userId }) => {
         return <div className="text-gray-500 text-center">No messages yet</div>;
     }
 
+    // Sort messages by timestamp
+    const sortedMessages = messages.slice().sort((a, b) => new Date(a.timestamp) - new Date(b.timestamp));
+
     return (
         <div className="flex-1 overflow-y-auto px-6">
-            {messages.map((message) => (
+            {sortedMessages.map((message) => (
                 <div
                     key={message.id || `${message.timestamp}-${message.senderId}`}
                     className={`py-4 flex items-start space-x-4 ${
@@ -42,6 +55,7 @@ const MessageContent = ({ messages, userId }) => {
                     </div>
                 </div>
             ))}
+            <div ref={messageEndRef} />
         </div>
     );
 };

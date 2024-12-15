@@ -22,6 +22,7 @@ function FormFillComp(props) {
     const [creatorProd, setCreatorprod] = useState(localStorage.getItem('email'))
     const location = useLocation();
     const category = location.state.category;
+    const allrep = location.state.resdata
 
     function backtoListing() {
         navigate("/SellListingView")
@@ -63,6 +64,9 @@ function FormFillComp(props) {
     console.log(locationProd)
     console.log(priceProd)
     console.log(creatorProd)
+    console.log(category)
+    console.log("allrep", allrep)
+    
 
 
     async function submitme() {

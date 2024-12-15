@@ -14,7 +14,7 @@
 }
 
 .nav-text-hover{
-  @apply hover:text-primary-color transition-all;
+  @apply hover:text-primary-color transition-all text-sm;
 }
 #container {
   scroll-snap-type: y mandatory; 

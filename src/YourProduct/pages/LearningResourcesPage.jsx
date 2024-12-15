@@ -7,8 +7,8 @@ import { useNavigate } from "react-router-dom";
 function LearningResourcesPage() {
     const navigate = useNavigate();
 
-    function gotoEditLR() {
-        navigate("/EditLearningResources")
+    function gotoEditLR(allrep) {
+        navigate("/EditListing",{ state: { category: "LR",resdata: allrep} })
     }
     return (
         <div className="poppins pb-4">
@@ -17,7 +17,7 @@ function LearningResourcesPage() {
                 <SearchSection />
                 <ProductTitle titleText={"Learning Resources"} />
             </div>
-            <ListProducts onFuncme={gotoEditLR} />
+            <ListProducts onFuncme={gotoEditLR} categ = "LR"/>
         </div>
     )
 }

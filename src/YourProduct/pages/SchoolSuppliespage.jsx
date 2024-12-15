@@ -8,8 +8,8 @@ import { useNavigate } from "react-router-dom";
 function SchoolSupplyPage() {
     const navigate = useNavigate();
 
-    function gotoEditLR() {
-        navigate("/EditSchoolSupplies")
+    function gotoEditLR(allrep) {
+        navigate("/EditListing",{ state: { category: "SS",resdata: allrep} })
     }
     return (
         <div className="pb-4 ">
@@ -18,7 +18,7 @@ function SchoolSupplyPage() {
                 <SearchSection />
                 <ProductTitle titleText={"School Supplies"} />
             </div>
-            <ListProducts onFuncme={gotoEditLR}/>
+            <ListProducts onFuncme={gotoEditLR} categ = "SS"/>
         </div>
     )
 }

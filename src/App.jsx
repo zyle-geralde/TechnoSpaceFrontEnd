@@ -21,6 +21,7 @@ import { useLocation } from 'react-router-dom';
 import BrowsePage from './BrowseProduct/pages/BrowsePage.jsx';
 import ViewProductPage from './ViewProduct/pages/viewProductPage.jsx';
 import ViewMessagePage from './Message/pages/ViewMessagePage';
+import EditListing from './OrigEditProduct/EditListing.jsx';
 
 function App() {
     const location = useLocation();
@@ -40,10 +41,7 @@ function App() {
             <Route path="/Schoolsuppliesview" element={<SchoolSupplyPage />} />
             <Route path="/Gadgetsview" element={<GadgetsPage />} />
             <Route path="/Othersview" element={<OthersPage />} />
-            <Route path="/EditLearningResources" element={<EditLearningResourcesPage />} /> 
-            <Route path="/EditSchoolSupplies" element={<EditSchoolSuplliesPage />} /> 
-            <Route path="/EditGadgets" element={<EditGadgets />} /> 
-            <Route path="/EditOthers" element={<EditOthers />} /> 
+            <Route path="/EditListing" element={<EditListing />} /> 
             <Route path="/SellListingView" element={<SellListingView />} /> 
             <Route path="/SellProductsInListing" element={<SellProductsInListing />} />
             <Route path="/LogIn" element={<LogInPage />} /> 

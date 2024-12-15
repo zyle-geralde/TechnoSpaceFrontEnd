@@ -1,9 +1,9 @@
-import '../styles/editlisting.css'
+import '../EditYourProducts/styles/editlisting.css'
 import React, { useRef } from "react";
 import { useNavigate } from 'react-router-dom';
 
 
-function EditFormButton(props) {
+function EditButtonOrg(props) {
   const modalRef = useRef(null);
   const modelSell = useRef(null);
   const navigate = useNavigate();
@@ -141,4 +141,4 @@ function EditFormButton(props) {
     )
 }
 
-export default EditFormButton;
+export default EditButtonOrg;

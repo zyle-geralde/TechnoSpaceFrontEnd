@@ -7,8 +7,8 @@ import { useNavigate } from "react-router-dom";
 function OthersPage() {
     const navigate = useNavigate();
 
-    function gotoEditLR() {
-        navigate("/EditOthers")
+    function gotoEditLR(allrep) {
+        navigate("/EditListing",{ state: { category: "O",resdata: allrep} })
     }
     return (
         <div className="pb-4 ">
@@ -17,7 +17,7 @@ function OthersPage() {
                 <SearchSection />
                 <ProductTitle titleText={"Others"} />
             </div>
-            <ListProducts onFuncme={gotoEditLR}/>
+            <ListProducts onFuncme={gotoEditLR} categ = "O"/>
         </div>
     )
 }

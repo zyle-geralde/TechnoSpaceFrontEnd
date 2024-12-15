@@ -1,4 +1,5 @@
 import "../styles/viewproductstyle.css"
+import ReportButton from "../../ReportComponents/ReportButton";
 import HeaderComp from "../../YourProduct/components/header";
 import BackComp from "../../EditYourProducts/components/backcomp";
 import { useNavigate } from "react-router-dom";
@@ -57,13 +58,11 @@ function ViewProductPage() {
                     <div className="prodPrice">
                         PHP 150
                     </div>
-                    <div className="buttonGroupClass">
+                    <div className="buttonGroupClass flex">
                         <div className="messageBut">
                             Message Seller
                         </div>
-                        <div className="reportBut">
-                            Report
-                        </div>
+                        <ReportButton />
                     </div>
                     <div className="containInfo">
                         <div style={{"fontWeight":"bold","marginTop":"10px"}}>Product Description</div>

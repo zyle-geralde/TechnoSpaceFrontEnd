@@ -6,8 +6,8 @@ import ProductTitle from "../components/productTitle";
 import { useNavigate } from "react-router-dom";
 function GadgetsPage() {
     const navigate = useNavigate();
-    function gotoEditLR() {
-        navigate("/EditGadgets")
+    function gotoEditLR(allrep) {
+        navigate("/EditListing",{ state: { category: "G",resdata: allrep} })
     }
     return (
         <div className="pb-4 ">
@@ -16,7 +16,7 @@ function GadgetsPage() {
                 <SearchSection />
                 <ProductTitle titleText={"Gadgets"} />
             </div>
-            <ListProducts onFuncme={gotoEditLR}/>
+            <ListProducts onFuncme={gotoEditLR} categ = "G"/>
         </div>
     )
 }

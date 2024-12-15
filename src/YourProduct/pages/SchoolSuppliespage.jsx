@@ -9,7 +9,7 @@ function SchoolSupplyPage() {
     const navigate = useNavigate();
 
     function gotoEditLR(allrep) {
-        navigate("/EditSchoolSupplies",{ state: { category: "G",resdata: allrep} })
+        navigate("/EditListing",{ state: { category: "SS",resdata: allrep} })
     }
     return (
         <div className="pb-4 ">

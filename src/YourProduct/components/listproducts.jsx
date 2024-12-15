@@ -26,11 +26,25 @@ function ListProducts(props) {
                 var holdimage = []
                 var holdname = []
                 var holdprice = []
-                setAllResponse(response.data)
+                var allresp = []
                 for (var elem of response.data) {
-                    holdimage.push(elem.mainImage)
-                    holdname.push(elem.name)
-                    holdprice.push(elem.price)
+                    console.log(localStorage.getItem("email"))
+                    console.log(elem.creator)
+                    console.log(localStorage.getItem("email") != elem.creator)
+                    if (localStorage.getItem("email") == elem.creator) {
+                        allresp.push(elem)
+                    }
+                }
+                setAllResponse(allresp)
+                for (var elem of response.data) {
+                    console.log(localStorage.getItem("email"))
+                    console.log(elem.creator)
+                    console.log(localStorage.getItem("email") != elem.creator)
+                    if (localStorage.getItem("email") == elem.creator) {
+                        holdimage.push(elem.mainImage)
+                        holdname.push(elem.name)
+                        holdprice.push(elem.price)
+                    }
                 }
                 setloadedProductImage(holdimage)
                 setloadedProductName(holdname)

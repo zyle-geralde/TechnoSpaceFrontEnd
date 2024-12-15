@@ -8,7 +8,7 @@ function LearningResourcesPage() {
     const navigate = useNavigate();
 
     function gotoEditLR(allrep) {
-        navigate("/EditLearningResources",{ state: { category: "G",resdata: allrep} })
+        navigate("/EditListing",{ state: { category: "LR",resdata: allrep} })
     }
     return (
         <div className="poppins pb-4">

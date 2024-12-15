@@ -8,7 +8,7 @@ function OthersPage() {
     const navigate = useNavigate();
 
     function gotoEditLR(allrep) {
-        navigate("/EditOthers",{ state: { category: "G",resdata: allrep} })
+        navigate("/EditListing",{ state: { category: "O",resdata: allrep} })
     }
     return (
         <div className="pb-4 ">

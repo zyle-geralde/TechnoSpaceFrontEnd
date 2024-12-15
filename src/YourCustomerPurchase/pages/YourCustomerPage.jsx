@@ -103,7 +103,20 @@ function YourCustomerPage() {
                             }}>
                                 ✓
                             </div>
-                            <div className="w-1/2 text-center text-3xl flex flex-col justify-center bg-red-700">
+                            <div className="w-1/2 text-center text-3xl flex flex-col justify-center bg-red-700"  onClick={function () {
+                                const updatedProduct = {
+                                    buyer: product.buyer,
+                                    seller: product.seller,
+                                    status: "Cancel",
+                                    prodName: product.prodName,
+                                    prodPrice: product.prodPrice,
+                                    prodImage: product.prodImage,
+                                };
+                                console.log(updatedProduct)
+                                console.log(product.id)
+                                updatePurchasedProduct(product.id, updatedProduct)
+                                
+                            }}>
                                 x
                             </div>
                         </div>

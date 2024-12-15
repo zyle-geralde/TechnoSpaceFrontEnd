@@ -25,7 +25,10 @@ function LogInPage() {
             const response = await axios.post('https://localhost:7016/api/Login',payload);
             setMessage('login success');
             localStorage.setItem('email', payload.EmailOrIDNumber);
-            console.log(payload)
+            localStorage.setItem('userId', response.data.user.userID);
+            localStorage.setItem('studentId', response.data.user.idNumber);
+            console.log(localStorage)
+            
             navLink("/BrowseProduct")
             
         } catch (error) {

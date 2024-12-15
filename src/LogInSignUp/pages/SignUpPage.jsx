@@ -81,7 +81,7 @@ function SignUpPage() {
                     <InputLogComp type="text" classinp="passwordInp" labelInp="LastName" onChangeF={lastnameSet}/>
                     <InputLogComp type="email" classinp="emailInp" labelInp="Email address" onChangeF={emailSet}/>
                     <InputLogComp type="password" classinp="passwordInp" labelInp="Password" onChangeF={passwordSet} />
-                    <InputLogComp type="number" classinp="emailInp" labelInp="Student ID" onChangeF={setID} />
+                    <InputLogComp type="text" classinp="emailInp" labelInp="Student ID" onChangeF={setID} />
                     <ButtonClickComp classBut="clickButton" titleBut="SignUp" onFunc={handleSignUp}/>
                     <ChangeLocComp message="Already have an account?" changelink="/LogIn" indic="Log In" />
                 </div>

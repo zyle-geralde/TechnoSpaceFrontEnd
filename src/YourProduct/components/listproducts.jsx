@@ -12,8 +12,9 @@ function ListProducts(props) {
     var [loadedProductPrice, setloadedProductPrice] = useState([])
 
 
-    var[allresponse,setAllResponse] = useState([])
-    
+    var [allresponse, setAllResponse] = useState([])
+    var [holdAllresp, setholdAllresp] = useState([])
+
 
     useEffect(() => {
         async function fetchProducts() {
@@ -36,6 +37,7 @@ function ListProducts(props) {
                     }
                 }
                 setAllResponse(allresp)
+                setholdAllresp(allresp)
                 for (var elem of response.data) {
                     console.log(localStorage.getItem("email"))
                     console.log(elem.creator)
@@ -57,18 +59,47 @@ function ListProducts(props) {
         fetchProducts();
     }, [props.categ]);
 
+
+    useEffect(() => {
+        const handleKeyDown = (event) => {
+            if (event.key === "Enter") {
+                console.log("repme",allresponse)
+                console.log(props.wrodS);
+                var cont = props.wrodS
+                if (cont == "") {
+                    setAllResponse(holdAllresp);
+                    return
+                }
+
+                var filteredResp = holdAllresp.filter(item => item.name.toLowerCase().includes(cont.toLowerCase()));
+                if (filteredResp.length == 0) {
+                    setAllResponse(holdAllresp);
+                    return
+                }
+
+                setAllResponse(filteredResp)
+            }
+        };
+
+        window.addEventListener("keydown", handleKeyDown);
+
+        return () => {
+            window.removeEventListener("keydown", handleKeyDown);
+        };
+    }, [props.wrodS]);
+
     return (
         <>
             <div className="sm:px-10 md:px-20 lg:px-30 xl:px-40">
                 <div className="grid grid-cols-2 gap-2 md:grid-cols-3 lg:gap-4 lg:grid-cols-4 px-2">
                     {
                         allresponse.map((item, index) => (
-                            <ProductCard imgsrc={item.mainImage} 
-                            prodName={item.name} 
-                            prodPrice={item.price} 
-                            key={index}
-                            origdata={item} 
-                            onFunc={props.onFuncme} />
+                            <ProductCard imgsrc={item.mainImage}
+                                prodName={item.name}
+                                prodPrice={item.price}
+                                key={index}
+                                origdata={item}
+                                onFunc={props.onFuncme} />
                         ))
                     }
                 </div>

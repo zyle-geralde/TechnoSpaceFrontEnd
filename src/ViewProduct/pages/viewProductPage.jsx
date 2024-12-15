@@ -4,8 +4,14 @@ import HeaderComp from "../../YourProduct/components/header";
 import BackComp from "../../EditYourProducts/components/backcomp";
 import { useNavigate } from "react-router-dom";
 import React, { useRef } from "react";
+import { useLocation } from "react-router-dom";
 
 function ViewProductPage() {
+
+  const location = useLocation();
+
+  const product = location.state?.product;
+
     const modelSell = useRef(null);
     
     const handleShowModalsell = () => {
@@ -34,29 +40,15 @@ function ViewProductPage() {
             <div className="contianmainProd">
                 <div className="firstHalfprod">
                     <div className="mainImageCont">
-                        <img src="./images/defaultImage.png" className="mainImage"></img>
-                    </div>
-                    <div className="subImageCont">
-                        <div className="subImagesubCont">
-                            <img src="./images/defaultImage.png" className="subImage"></img>
-                        </div>
-                        <div className="subImagesubCont">
-                            <img src="./images/defaultImage.png" className="subImage"></img>
-                        </div>
-                        <div className="subImagesubCont">
-                            <img src="./images/defaultImage.png" className="subImage"></img>
-                        </div>
-                        <div className="subImagesubCont">
-                            <img src="./images/defaultImage.png" className="subImage"></img>
-                        </div>
+                      <img src={product.mainImage} className="mainImage"></img>
                     </div>
                 </div>
                 <div className="secondHalfprod">
                     <div className="prodTitle">
-                        Long bond paper good product
+                          {product.name}
                     </div>
                     <div className="prodPrice">
-                        PHP 150
+                    {product.price}
                     </div>
                     <div className="buttonGroupClass flex">
                         <div className="messageBut">
@@ -67,32 +59,24 @@ function ViewProductPage() {
                     <div className="containInfo">
                         <div style={{"fontWeight":"bold","marginTop":"10px"}}>Product Description</div>
                         <div className="ProdDesc">
-                            asjkdfnjksanfkjsndfkjsandkfjnasdkjfnasdjkfndaskjnksajfasjkdfnjksanfkjsndfkjsandkfjnasdkjfnasdjkfndaskjnksajf
-                            asjkdfnjksanfkjsndfkjsandkfjnasdkjfnasdjkfndaskjnksajfasjkdfnjksanfkjsndfkjsandkfjnasdkjfnasdjkfndaskjnksajf
-                            asjkdfnjksanfkjsndfkjsandkfjnasdkjfnasdjkfndaskjnksajfasjkdfnjksanfkjsndfkjsandkfjnasdkjfnasdjkfndaskjnksajf
-                            asjkdfnjksanfkjsndfkjsandkfjnasdkjfnasdjkfndaskjnksajfasjkdfnjksanfkjsndfkjsandkfjnasdkjfnasdjkfndaskjnksajf
-                            asjkdfnjksanfkjsndfkjsandkfjnasdkjfnasdjkfndaskjnksajfasjkdfnjksanfkjsndfkjsandkfjnasdkjfnasdjkfndaskjnksajf
-                            asjkdfnjksanfkjsndfkjsandkfjnasdkjfnasdjkfndaskjnksajfasjkdfnjksanfkjsndfkjsandkfjnasdkjfnasdjkfndaskjnksajf
-                            asjkdfnjksanfkjsndfkjsandkfjnasdkjfnasdjkfndaskjnksajfasjkdfnjksanfkjsndfkjsandkfjnasdkjfnasdjkfndaskjnksajf
-                            asjkdfnjksanfkjsndfkjsandkfjnasdkjfnasdjkfndaskjnksajfasjkdfnjksanfkjsndfkjsandkfjnasdkjfnasdjkfndaskjnksajf
+                          {product.description}
 
 
                         </div>
                         <div style={{"fontWeight":"bold","marginTop":"10px"}}>Product Specification</div>
                         <div className="ProdSpecification">
-                            asjkdfnjksanfkjsndfkjsandkfjnasdkjfnasdjkfndaskjnksajfasjkdfnjksanfkjsndfkjsandkfjnasdkjfnasdjkfndaskjnksajf
-                            asjkdfnjksanfkjsndfkjsandkfjnasdkjfnasdjkfndaskjnksajfasjkdfnjksanfkjsndfkjsandkfjnasdkjfnasdjkfndaskjnksajf
+                          {product.specialization}
 
 
                         </div>
                         <div style={{"fontWeight":"bold","marginTop":"10px"}}>Available Schedule</div>
                         <div className="AveSched">
-                            asjkdfnjksanfkjsndfkjsandkfjnasdkjfnasdjkfndaskjnksajfasjkdfnjksanfkjsndfkjsandkfjnasdkjfnasdjkfndaskjnksajf
+                          {product.schedule}
 
                         </div>
                         <div style={{"fontWeight":"bold","marginTop":"10px"}}>Location</div>
                         <div className="LocProd">
-                            asjkdfnjksanfkjsndfkjsandkfjnasdkjfnasdjkfndaskjnk
+                            {product.location}
                         </div>
                     </div>
                     <div className="PurchProd" onClick={handleShowModalsell}>Purchase Product</div>

@@ -44,7 +44,9 @@ function BrowseListProducts(props) {
                                 prodPrice={item.price}
                                 key={index}
                                 origdata={item}
-                                onFunc={props.onFuncme} />
+                                onFunc={function () { 
+                                    props.onFuncme(item)
+                                }} />
                         ))
                     }
                 </div>

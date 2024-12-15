@@ -10,8 +10,8 @@ import { useState } from "react";
 function BrowsePage() {
     const navigate = useNavigate();
     var [droptitle,setdroptitle] = useState("All")
-    function OpenProd() {
-        navigate("/ViewProduct")
+    function OpenProd(prodSpecs) {
+        navigate("/ViewProduct",{ state: { product: prodSpecs } })
     }
     function changeAll() {
         setdroptitle("All")

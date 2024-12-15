@@ -2,8 +2,6 @@ import React, { useState, useEffect } from "react"; // Ensure useState and useEf
 import ProductCard from '../../YourProduct/components/productCard';
 import "../styles/browseProd.css"
 import { useNavigate } from "react-router-dom";
-import { useState } from "react";
-import { useEffect } from 'react';
 import axios from 'axios';
 
 

@@ -128,8 +128,8 @@ function EditButtonOrg(props) {
               >
                 Cancel
               </button>
-              <button type="button" className="btn btn-success w-1/2 text-sm">
-                Yes
+              <button type="button" className="btn btn-success w-1/2 text-sm" onClick={props.clickedSave}>
+                Confirm
               </button>
             </div>
           </div>

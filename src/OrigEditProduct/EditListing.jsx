@@ -106,6 +106,21 @@ function EditListing() {
         }
     };
 
+    const deleteProduct = async (productId) => {
+        try {
+          const response = await axios.delete(`https://localhost:7016/api/Products/${productId}`);
+          console.log('Product deleted:', response.data);
+        } catch (error) {
+          console.error('There was an error deleting the product:', error);
+        }
+    };
+    
+    async function clickDel() {
+        await deleteProduct(allrep.id)
+        navtoLearningResources()
+        window.location.reload()
+    }
+
     async function clickSave() {
         console.log("clicked save")
         let downloadURL = mainImage;
@@ -173,7 +188,7 @@ function EditListing() {
                         <FormLabelOrg formName="Price" typeform="formnumT" onfunc={pricefunc} defaultword={priceProd} />
                         <div className='flex flex-row w-full'>
                             <div className='flex flex-row w-full gap-2'>
-                                <EditButtonOrg classIndic={"cancelBut"} ButtonName={"Delete"} clickedSave={clickSave} />
+                                <EditButtonOrg classIndic={"cancelBut"} ButtonName={"Delete"} clickedSave={clickDel} />
                                 <EditButtonOrg classIndic={"doneBut"} ButtonName={"Save"} clickedSave={clickSave} />
                             </ div>
                         </div>

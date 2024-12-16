@@ -14,7 +14,7 @@
 }
 
 .nav-text-hover{
-  @apply hover:text-primary-color transition-all text-sm;
+  @apply hover:text-primary-color transition-all;
 }
 #container {
   scroll-snap-type: y mandatory; 
@@ -27,6 +27,11 @@
   @apply flex-col justify-start sm:px-2 h-fit sm:flex md:gap-5 md:h-fit  md:px-20 lg:h-screen  lg:px-32  xl:px-40; 
   animation: autoShowAnimation;
   /* scroll-snap-align: start; */
+  animation-timeline: view(90% 30%);
+}
+.middle{
+  @apply gap-4 items-center justify-center md:px-20 lg:h-screen lg:px-32  xl:px-40;
+  animation: autoShowAnimation;
   animation-timeline: view(90% 30%);
 }
 #container > div > *{
@@ -71,9 +76,7 @@ body:not(.no-scroll-styles)::-webkit-scrollbar-thumb {
 @keyframes autoShowAnimation {
   from {
     opacity: 0;
-    transform: scale(0);
   }to {
     opacity: 1;
-    transform: scale(1);
   }
 }

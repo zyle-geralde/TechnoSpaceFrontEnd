@@ -22,6 +22,7 @@ import BrowsePage from './BrowseProduct/pages/BrowsePage.jsx';
 import ViewProductPage from './ViewProduct/pages/viewProductPage.jsx';
 import ViewMessagePage from './Message/pages/ViewMessagePage';
 import EditListing from './OrigEditProduct/EditListing.jsx';
+import ReviewButton from './ReviewComponents/ReviewButton.jsx';
 
 function App() {
     const location = useLocation();
@@ -52,6 +53,7 @@ function App() {
             <Route path="/View-message" element={<ViewMessagePage />} />
             <Route path="*" element={<NotfundFunc />} />
             <Route path="/" element={<LandingPage />} />
+            <Route path="/Button" element={<ReviewButton email={"sss@nnn.com"} />} />
         </Routes>
     );
 

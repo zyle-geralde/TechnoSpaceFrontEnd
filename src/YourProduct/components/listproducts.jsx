@@ -1,10 +1,8 @@
-import ProductCard from "./productCard"
-import '../style/yourProductlist.css'
+import ProductCard from "./productCard";
+import '../style/yourProductlist.css';
 import { useNavigate } from "react-router-dom";
-import { useState } from "react";
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
-
 
 function ListProducts(props) {
     var [loadedProductImage, setloadedProductImage] = useState([])
@@ -22,7 +20,7 @@ function ListProducts(props) {
                 const response = await axios.get("https://localhost:7016/api/Products/category", {
                     params: { category: props.categ },
                 });
-                console.log(response.data)
+                console.log(response.data);
 
                 var holdimage = []
                 var holdname = []
@@ -105,7 +103,7 @@ function ListProducts(props) {
                 </div>
             </div>
         </>
-    )
+    );
 }
 
-export default ListProducts
+export default ListProducts;

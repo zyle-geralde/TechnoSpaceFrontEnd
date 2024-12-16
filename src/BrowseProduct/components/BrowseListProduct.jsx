@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from "react"; // Ensure useState and useEffect are imported
 import ProductCard from '../../YourProduct/components/productCard';
 import "../styles/browseProd.css"
 import { useNavigate } from "react-router-dom";
@@ -84,4 +85,4 @@ const BrowseListProducts = forwardRef((props, ref) => {
     );
 });
 
-export default BrowseListProducts
+export default BrowseListProducts;

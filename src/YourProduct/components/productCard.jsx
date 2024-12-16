@@ -1,14 +1,13 @@
-import '../style/yourProductlist.css'
+import React from 'react'; 
+import '../style/yourProductlist.css';
 import { useNavigate } from "react-router-dom";
 
 function ProductCard(props) {
     return (
         <>
-            <div className="cardProd" onClick={function (e) {
-                props.onFunc(props.origdata)
-            }}>
-                <div style={{"height":"215px","overflow":"hidden"}}>
-                    <img src={props.imgsrc} className='prodCardImage'></img>
+            <div className="cardProd" onClick={() => props.onFunc(props.origdata)}>
+                <div style={{ height: "215px", overflow: "hidden" }}>
+                    <img src={props.imgsrc} className='prodCardImage' alt="Product" />
                 </div>
                 <div className='p-2 overflow-hidden'>
                     <div className='font-bold'>
@@ -18,7 +17,7 @@ function ProductCard(props) {
                 </div>
             </div>
         </>
-    )
+    );
 }
 
-export default ProductCard
+export default ProductCard;

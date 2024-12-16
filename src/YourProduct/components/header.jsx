@@ -13,6 +13,9 @@ function HeaderComp() {
         navigate("/YourCustomerPurchase");
     }
 
+    function messageChange() {
+        navigate("/View-message")
+    }
     return (
         <div className="sticky top-0 z-50 backdrop-blur-sm border-3 border-b-primary-color p-2">
             <div className="text-sm flex flex-row self-center sm:px-10 md:px-20 lg:px-30 xl:px-40">
@@ -46,6 +49,7 @@ function HeaderComp() {
                         src="/images/User.png"
                         className="h-6 my-auto hover:cursor-pointer hover:scale-110 transition-all"
                     />
+                    <img src="/svg/message-icon.svg"  onClick={messageChange} className="h-5 my-auto"></img>
                 </div>
             </div>
         </div>

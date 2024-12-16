@@ -1,4 +1,5 @@
 import "../styles/loginsignup.css"
+import "../../index.css"
 import TitleLogComp from "../components/TitleLogComp";
 import InputLogComp from "../components/InputLogComp";
 import ButtonClickComp from "../components/buttonClickComp";
@@ -33,16 +34,16 @@ function LogInPage() {
             
         } catch (error) {
             if (error.response.status == "400") {
-                alert("Invalid Credentials")
+                setMessage("Invalid Credentials")
             }
             else if(error.response.status == "404") {
-                alert("Invalid Credentials")
+                setMessage("Invalid Credentials")
             }
             else if (error.response.status == "401") {
-                alert("Invalid Credentials")
+                setMessage("Invalid Credentials")
             }
             else {
-                alert(error.message)
+                setMessage(error.message)
             }
             navLink("/Login")
             console.log("Email/ID:", email_id, "Password:", password);
@@ -64,14 +65,19 @@ function LogInPage() {
     }
 
     return <>
-        <div className="LogInMainCont">
-            <div className="logInCont">
-                <div className="logInformCont">
-                    <TitleLogComp title="LogIn" />
-                    <InputLogComp type="email" classinp="emailInp" labelInp="Email address" onChangeF={setUserEmail}/>
-                    <InputLogComp type="password" classinp="passwordInp" labelInp="Password" onChangeF={setUserPassword}/>
-                    <ButtonClickComp classBut="clickButton" titleBut="LogIn" onFunc={handleLogin} />
-                    <ChangeLocComp message="Don't have an account?" changelink="/SignUp" indic="Sing up" />
+        <div className="LogInMainCont poppins ">
+            <div className="logInCont mx-auto">
+                <div className="logInformCont  h-fit my-auto">
+                    <TitleLogComp title="Welcome Back!"/>
+                    <div className="w-full md:w-4/5 flex flex-col gap-2">
+                        <InputLogComp type="email" classinp="emailInp w-full" labelInp="Email address" onChangeF={setUserEmail}/>
+                        <InputLogComp type="password" classinp="passwordInp" labelInp="Password" onChangeF={setUserPassword}/>
+                    </div>
+                    <small className="text-red-600 text-left w-full md:w-4/5">{message}</small>
+                    <div className="w-full md:w-4/5">
+                        <ButtonClickComp classBut="clickButton hover:bg-red-800 p-3 w-full" titleBut="Log In" onFunc={handleLogin} />
+                        <ChangeLocComp message="Don't have an account?" changelink="/SignUp" indic="Sign up" />
+                    </div>
                 </div>
                 <div className="imageContSign">
                     <img src="./images/SignLeft.png" className="imageSelfSign"></img>

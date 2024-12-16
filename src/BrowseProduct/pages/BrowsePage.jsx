@@ -5,28 +5,43 @@ import ProductTitle from "../../YourProduct/components/productTitle";
 import BrowseListProducts from "../components/BrowseListProduct";
 import { useNavigate } from "react-router-dom";
 import BrowseSearchSection from "../components/BrowseSearchSection";
-import { useState } from "react";
+import { useState,useRef } from "react";
 
 function BrowsePage() {
     const navigate = useNavigate();
-    var [droptitle,setdroptitle] = useState("All")
+    var [droptitle, setdroptitle] = useState("All")
+    const productRef = useRef(null);
+
     function OpenProd(prodSpecs) {
         navigate("/ViewProduct",{ state: { product: prodSpecs } })
     }
     function changeAll() {
         setdroptitle("All")
+        window.location.reload()
     }
     function changeLR() {
         setdroptitle("Learning Resources")
+        if (productRef.current) {
+            productRef.current.fetchcategory("LR");
+        }
     }
     function changeSS() {
         setdroptitle("School Supplies")
+        if (productRef.current) {
+            productRef.current.fetchcategory("SS");
+        }
     }
     function changeO() {
         setdroptitle("Others")
+        if (productRef.current) {
+            productRef.current.fetchcategory("O");
+        }
     }
     function changeG() {
         setdroptitle("Gadgets")
+        if (productRef.current) {
+            productRef.current.fetchcategory("G");
+        }
     }
     return (
         <div style={{
@@ -55,7 +70,7 @@ function BrowsePage() {
                 </div>
             </div>
             <div className="scrollable-container">
-                <BrowseListProducts onFuncme={OpenProd} />
+                <BrowseListProducts ref={productRef} onFuncme={OpenProd} />
             </div>
         </div>
     )

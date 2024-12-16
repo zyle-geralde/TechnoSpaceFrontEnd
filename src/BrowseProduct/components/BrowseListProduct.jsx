@@ -7,12 +7,14 @@ import axios from 'axios';
 
 const BrowseListProducts = forwardRef((props, ref) => {
     const [allresponse, setAllResponse] = useState([]);
+    var [holdAllresp, setholdAllresp] = useState([]);
 
     async function fetchAllProducts() {
         try {
             const response = await axios.get("https://localhost:7016/api/Products/all");
             console.log(response.data);
             setAllResponse(response.data);
+            setholdAllresp(response.data)
         } catch (err) {
             console.error("Error fetching products:", err);
         }
@@ -33,6 +35,34 @@ const BrowseListProducts = forwardRef((props, ref) => {
     useEffect(() => {
         fetchAllProducts(); // Initial load
     }, []);
+
+    useEffect(() => {
+        const handleKeyDown = (event) => {
+            if (event.key === "Enter") {
+                console.log("repme",allresponse)
+                console.log(props.wordS);
+                var cont = props.wordS
+                if (cont == "") {
+                    setAllResponse(holdAllresp);
+                    return
+                }
+
+                var filteredResp = holdAllresp.filter(item => item.name.toLowerCase().includes(cont.toLowerCase()));
+                if (filteredResp.length == 0) {
+                    setAllResponse(holdAllresp);
+                    return
+                }
+
+                setAllResponse(filteredResp)
+            }
+        };
+
+        window.addEventListener("keydown", handleKeyDown);
+
+        return () => {
+            window.removeEventListener("keydown", handleKeyDown);
+        };
+    }, [props.wordS]);
 
     return (
         <div className="pGridView">

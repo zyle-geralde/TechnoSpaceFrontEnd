@@ -77,10 +77,10 @@ function YourCustomerPage() {
                                 </div>
                                 <div className="flex flex-col self-end">
                                     <div className="f2t text-xs">
-                                        {product.buyer}
+                                        Buyer: {product.buyer}
                                     </div>
                                     <div className="text-sm f3t">
-                                        {product.prodPrice}
+                                        P{product.prodPrice}
                                     </div>
                                 </div>
                             </div>

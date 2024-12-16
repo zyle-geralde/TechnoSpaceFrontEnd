@@ -4,6 +4,7 @@ import "../YourCustomerPurchase/style/yourcustomer.css"
 import { useState } from "react";
 import axios from "axios";
 import { useEffect } from "react";
+import ReviewButton from "../ReviewComponents/ReviewButton";
 function PurchaseHistoryPage() {
     var [prodList, setProdList] = useState([]);
     const localemial = localStorage.getItem("email")
@@ -11,7 +12,7 @@ function PurchaseHistoryPage() {
     const getAllPurchaseProducts = async () => {
         try {
             const response = await axios.get("https://localhost:7016/api/Purchaseproducts/all");
-            console.log("Purchased Products:", response.data);
+            // console.log("Purchased Products:", response.data);
             return response.data;
         } catch (error) {
             if (error.response) {
@@ -64,7 +65,7 @@ function PurchaseHistoryPage() {
             <div className="rounded-sm text-center bg-primary-color w-full text-white text-lg p-2 mx-auto md:w-2/3 lg:w-1/2 m-2">Purchase History</div>
             <div className="flex flex-col w-full  sm:px-10 md:px-20 lg:px-30 xl:px-40 gap-2 poppins pb-4">
                 {prodList.map((product, index) => (
-                    <div key={index} className="flex flex-row border-2 w-full p-1" style={{"justifyContent":"space-between"}}>
+                    <div key={index} className="flex flex-row border-2 w-full p-2" style={{"justifyContent":"space-between"}}>
                         <div className="w-4/5 flex flex-row gap-2">
                             <div className="ImageProdCont my-auto ml-1">
                                 <img src={product.prodImage} className="productcImage" alt="Product" />
@@ -84,10 +85,10 @@ function PurchaseHistoryPage() {
                             </div>
                         </div>
 
-                        <div style={{ "display": "flex", "flexDirection": "column", "justifyContent": "space-between" }}>
-                            {transactionLabel(product.status)}
-                            <div style={{"backgroundColor":"green","padding":"5px 10px","borderRadius":"5px","color":"white","fontSize":"13px","textAlign":"center","width":"146.83px"}}>
-                                Rate
+                        <div className="flex flex-col justify-around">
+                            <span>{transactionLabel(product.status)}</span>
+                            <div className="w-fit ml-auto">
+                                <ReviewButton email={product.seller} />
                             </div>
                         </div>
                     </div>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
 import "../ReviewComponents/review.css"
 import axios from "axios";
@@ -7,10 +7,34 @@ function ReviewButton(props){
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [reviewMessage, setReviewMessage] = useState(null);
     const [responseMessage, setResponseMessage] = useState(null);
-    const [rating, setRating] = useState(0)
+    const [rating, setRating] = useState(0);
+    const [user, setUser] = useState(null)
+    const [hasReviewed, setHasReviewed] = useState(false);
+    // console.log(props.email)
     const openModal = () => {
         setIsModalOpen(!isModalOpen);
     };
+
+    const fetchData = async () => {
+        try {
+        const currentID = localStorage.getItem('userId')
+        
+        const userResponse = await axios.get(`https://localhost:7016/api/user?email=${props.email}`);
+            const userId = userResponse.data.id;
+            setUser(userResponse.data);
+        
+            const reviewResponse = await axios.get(`https://localhost:7016/api/review/check_if_rated/${currentID}/${userId}`);
+            setHasReviewed(reviewResponse.data)
+            console.log(reviewResponse.data)
+        }
+        catch(error){
+
+        }
+    }
+    useEffect(()=>{
+        fetchData()
+    }, [props.email])
+
     const showResponseResult = (message) => {
         setResponseMessage(message);
         setTimeout(() => {
@@ -37,6 +61,7 @@ function ReviewButton(props){
             const reset =()=>{setRating(0); }
             reset();
             showResponseResult("Your review has been successfully submitted. We greatly appreciate your contribution to maintaining a safe and welcoming community!")
+            fetchData()
         }catch(error) {
             openModal()
             showResponseResult("Oops! Something went wrong, and your review wasn't submitted. Please try again.")
@@ -46,7 +71,14 @@ function ReviewButton(props){
 
     return (
         <div>
-            <button onClick={openModal} className="px-4 p-2 bg-red-800 text-white self-center h-full">Review</button>
+            { 
+                !hasReviewed &&
+                <button onClick={openModal} className="px-4 p-2 bg-red-800 text-white self-center h-full">Review User</button>
+            }
+            {
+                hasReviewed &&
+                <button onClick={openModal} className="px-4 p-2 bg-gray-300 text-gray-700 self-center h-full" disabled>Review User</button>
+            }
 
             {
             isModalOpen && 

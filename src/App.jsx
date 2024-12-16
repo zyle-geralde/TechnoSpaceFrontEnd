@@ -22,6 +22,7 @@ import BrowsePage from './BrowseProduct/pages/BrowsePage.jsx';
 import ViewProductPage from './ViewProduct/pages/viewProductPage.jsx';
 import ViewMessagePage from './Message/pages/ViewMessagePage';
 import EditListing from './OrigEditProduct/EditListing.jsx';
+import PurchaseHistoryPage from './PurchaseHistory/Purchasehistory.jsx';
 
 function App() {
     const location = useLocation();
@@ -50,6 +51,7 @@ function App() {
             <Route path="/YourCustomerPurchase" element={<YourCustomerPage />} /> 
             <Route path="/ViewProduct" element={<ViewProductPage />} /> 
             <Route path="/View-message" element={<ViewMessagePage />} />
+            <Route path="/PurchaseHistory" element={<PurchaseHistoryPage />} />
             <Route path="*" element={<NotfundFunc />} />
             <Route path="/" element={<LandingPage />} />
         </Routes>

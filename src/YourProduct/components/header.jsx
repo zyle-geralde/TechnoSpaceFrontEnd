@@ -11,7 +11,7 @@ function HeaderComp() {
                 <div className=" flex flex-row gap-3 my-auto">
                     <a href="/BrowseProduct" className="hover:text-primary-color" >Products</a>
                     <a href="/Yourproducts" className="hover:text-primary-color">Your Products</a>
-                    <a href="/Yourproducts" className="hover:text-primary-color">Purchase History</a>
+                    <a href="/PurchaseHistory" className="hover:text-primary-color">Purchase History</a>
                 </div>
                 <div className="flex flex-row self-end ml-auto gap-3">
                     <img src="/images/icon.png"  onClick={yourCustomerChange} className="h-3 my-auto"></img>

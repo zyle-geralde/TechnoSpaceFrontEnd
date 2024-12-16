@@ -6,8 +6,8 @@ function InputLogComp(props) {
         props.onChangeF(event.target.value)
     }
     return <>
-        <div className="forInpCont">
-            <div className="form-floating mb-3">
+        <div className="w-full">
+            <div className="form-floating">
                 <input type={props.type} className={`form-control ${props.classinp}`} id="floatingInput" placeholder="xxx@xxx.com" onChange={onchangeme}/>
                 <label htmlFor="floatingInput">{ props.labelInp}</label>
             </div>
